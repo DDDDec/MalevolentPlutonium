@@ -13,7 +13,8 @@
             <div class="content">
                 <div>
 
-
+                    <x-content.homepage.serverlist/>
+                    <x-content.homepage.server-statistics/>
 
                 </div>
                 <div>

@@ -18,5 +18,8 @@ command_account_levelup(args)
         self tell("You're max level, to carry on you need to .prestige");
         return;
 
-
+    if (args[1] == "all")
+        account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
+        self tell("");
+        return;
 }

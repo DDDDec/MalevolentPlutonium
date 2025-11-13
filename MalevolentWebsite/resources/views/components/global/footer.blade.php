@@ -5,7 +5,8 @@
                 &copy; {{ config('app.domain', 'localhost') }}
             </div>
             <div>
-                <i class="fa-brands fa-discord"></i>
+                <a><li><i class="fa-brands fa-discord"></i></li></a>
+                <a><li><i class="fa-brands fa-youtube"></i></li></a>
             </div>
         </div>
     </div>

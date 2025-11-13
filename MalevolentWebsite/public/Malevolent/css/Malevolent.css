@@ -34,6 +34,7 @@ nav .navigator {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
+    font-size: 0;
 }
 nav .navigator div li {
     padding: 25px;
@@ -42,6 +43,7 @@ nav .navigator div li {
     display: inline-block;
     transition: 0.2s;
     cursor: pointer;
+    font-size: 16px;
 }
 nav .navigator div li:hover {
     background: #3b82f612;
@@ -101,29 +103,109 @@ header .header i {
 .content {
     width: 100%;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
     gap: 25px;
+    margin-top: 150px;
+}
+
+.serverlist {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+.serverlist .serverlist-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.serverlist .serverlist-grid .serverlist-grid-section {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    height: 105px;
+    padding-left: 15px;
+    padding-right: 10px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+.serverlist .serverlist-grid .serverlist-grid-section .title {
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.serverlist .serverlist-grid .serverlist-grid-section .title i {
+    color: #599bfa;
+    margin-right: 5px;
+}
+.serverlist .serverlist-grid .serverlist-grid-section .description {
+    color: #ffffffcc;
+    font-size: 15px;
+    padding-bottom: 6px;
+}
+
+.server-statistics {
+    width: 100%;
+    margin-top: 50px;
+}
+.server-statistics .server-statistics-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.server-statistics .server-statistics-grid .server-statistics-grid-section {
+    width: 100%;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid #a7a7a70d;
+}
+.server-statistics .server-statistics-grid .server-statistics-grid-section .title {
+    color: #ffffffcc;
+    text-align: center;
+}
+.server-statistics .server-statistics-grid .server-statistics-grid-section .description {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 footer {
     width: 100%;
     border-top: 2px solid #ffffff1c;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 footer .footer {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
+    padding: 25px 0;
 }
 footer .footer div:first-child {
     color: white;
     font-weight: 600;
-    padding: 50px 0;
+    padding: 25px 0;
 }
 footer .footer div:last-child {
-    color: white;
-    font-weight: 600;
-    padding: 50px 0;
     display: flex;
     justify-content: end;
+}
+footer .footer div:last-child a li {
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+footer .footer div:last-child a li:hover {
+    background: #3b82f612;
+    color: #599bfa;
 }

@@ -12,5 +12,5 @@
 ///////////////////////////////////////////////
 event_server_started()
 {
-    database_query("INSERT INTO server_actions", array());
+    database_query("INSERT INTO server_actions ('') VALUES (?)", array());
 }
