@@ -222,11 +222,35 @@ header .header i {
     background: #a7a7a70d;
     box-sizing: border-box;
     position: relative;
-    height: 105px;
     padding-left: 15px;
     padding-right: 10px;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
+}
+.player-actions .placeholder .title {
+    font-weight: 600;
+    margin-top: 18px;
+    padding-left: 40px;
+}
+.player-actions .placeholder .title a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.player-actions .placeholder .title a:hover {
+    color: #599bfa;
+}
+.player-actions .placeholder img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.player-actions .placeholder .description {
+    color: #ffffffcc;
+    font-size: 14px;
+    padding: 15px 0;
 }
 
 .server-actions {
@@ -245,11 +269,35 @@ header .header i {
     background: #a7a7a70d;
     box-sizing: border-box;
     position: relative;
-    height: 105px;
     padding-left: 15px;
     padding-right: 10px;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
+}
+.server-actions .placeholder .title {
+    font-weight: 600;
+    margin-top: 18px;
+    padding-left: 40px;
+}
+.server-actions .placeholder .title a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.server-actions .placeholder .title a:hover {
+    color: #599bfa;
+}
+.server-actions .placeholder img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.server-actions .placeholder .description {
+    color: #ffffffcc;
+    font-size: 14px;
+    padding: 15px 0;
 }
 
 footer {

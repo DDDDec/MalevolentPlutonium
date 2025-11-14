@@ -33,6 +33,38 @@
                 <div class="title">Peak Players</div>
                 <div class="description">10,000</div>
             </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Chat Games</div>
+                <div class="description">10,000</div>
+            </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Registered</div>
+                <div class="description">10,000</div>
+            </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Traveled</div>
+                <div class="description">10,000km</div>
+            </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Gambled</div>
+                <div class="description">£10,000</div>
+            </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Circulating</div>
+                <div class="description">£100,000</div>
+            </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Dogs Killed</div>
+                <div class="description">1,000</div>
+            </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Servers Online</div>
+                <div class="description">30</div>
+            </div>
+            <div class="server-statistics-grid-section">
+                <div class="title">Interest</div>
+                <div class="description">£10,000</div>
+            </div>
         </div>
     </div>
 </div>
