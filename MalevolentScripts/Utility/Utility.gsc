@@ -430,33 +430,6 @@ utility_format_card(card)
 }
 
 ////////////////////////////////////////////
-// Utility Weapon Stock Size Function     //
-////////////////////////////////////////////
-// Returns a given weapons stock size     //
-////////////////////////////////////////////
-utility_weapon_name(weapon)
-{
-    switch (weapon)
-    {
-        case "sticky_grenade_zm":
-            return "Semtex";
-            break;
-
-        case "rottweil72_zm":
-            return "Olympia";
-            break;
-
-        case "mp5k_zm":
-            return "MP5";
-            break;
-
-        case "m14_zm":
-            return "M14";
-            break;
-    }
-}
-
-////////////////////////////////////////////
 // Utility Print Origin Function          //
 ////////////////////////////////////////////
 // Returns the origin of the player       //
