@@ -20,16 +20,30 @@ command_account_levelup(args)
     }
 
     account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
-    next_level_money = int(player_data[0]) * 50000;
+    next_level_money = int(account[0][0]["player_level"]) * 50000;
     next_level = int(account[0][0]["player_level"]) + 1;
 
     if (int(account[0][0]["player_money"]) <= int(next_level_money)) {
-        self tell("[^5LevelUp^7] You cannot afford to levelup you need ^5$" + utility_format_number(next_level));
+        self tell("[^5LevelUp^7] You cannot afford to levelup you need ^5$" + utility_format_number(next_level_money));
         return;
     }
 
     if (isDefined(args[1]) && args[1] == "all") {
+        while (int(account[0][0]["player_level"]) < 65) {
+            if (int(account[0][0]["player_money"]) < int(next_level_money)) {
+                break;
+            }
+
+            account[0][0]["player_level"] = int(account[0][0]["player_level"]) + 1;
+            account[0][0]["player_money"] = int(account[0][0]["player_money"]) - int(next_level_money);
+            next_level_money = int(account[0][0]["player_level"]) * 50000;
+            next_level = int(account[0][0]["player_level"]) + 1;
+        }
+
+        database_query("UPDATE  user_statistics SET player_level=?, player_money=? WHERE id=?", array(account[0][0]["player_level"], account[0][0]["player_money"], self.guid));
+
         self tell("[^5LevelUp^7] You have levelled up as many times as you can afford");
+
         return;
     }
 

@@ -1,18 +1,18 @@
-////////////////////////////////////////////////////////////////
-// Include Chat Command Scripts                               //
-////////////////////////////////////////////////////////////////
-#include scripts/zm/Chat/Commands/CommandChat;                //
-#include scripts/zm/Chat/Commands/Account/CommandAccountDetails; //
-#include scripts/zm/Chat/Commands/Account/CommandAccountLevelup; //
+////////////////////////////////////////////////////////////////////
+// Include Chat Command Scripts                                   //
+////////////////////////////////////////////////////////////////////
+#include scripts/zm/Chat/Commands/CommandChat;                    //
+#include scripts/zm/Chat/Commands/Account/CommandAccountDetails;  //
+#include scripts/zm/Chat/Commands/Account/CommandAccountLevelup;  //
 #include scripts/zm/Chat/Commands/Account/CommandAccountPrestige; //
-#include scripts/zm/Chat/Commands/Bank/CommandBankBalance;    //
-#include scripts/zm/Chat/Commands/Bank/CommandBankDeposit;    //
-#include scripts/zm/Chat/Commands/Bank/CommandBankPay;        //
-#include scripts/zm/Chat/Commands/Bank/CommandBankShare;      //
-#include scripts/zm/Chat/Commands/Bank/CommandBankWithdraw;   //
-#include scripts/zm/Chat/Commands/Gamble/CommandGambleBet;    //
-#include scripts/zm/Chat/Commands/Staff/CommandStaffGodmode;  //
-////////////////////////////////////////////////////////////////
+#include scripts/zm/Chat/Commands/Bank/CommandBankBalance;        //
+#include scripts/zm/Chat/Commands/Bank/CommandBankDeposit;        //
+#include scripts/zm/Chat/Commands/Bank/CommandBankPay;            //
+#include scripts/zm/Chat/Commands/Bank/CommandBankShare;          //
+#include scripts/zm/Chat/Commands/Bank/CommandBankWithdraw;       //
+#include scripts/zm/Chat/Commands/Gamble/CommandGambleBet;        //
+#include scripts/zm/Chat/Commands/Staff/CommandStaffGodmode;      //
+////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////
 // Initialize Commands Function              //
