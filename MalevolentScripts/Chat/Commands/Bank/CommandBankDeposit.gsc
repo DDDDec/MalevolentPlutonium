@@ -22,11 +22,11 @@ command_bank_deposit(args)
 
     if (args[1] == "all")
         database_query("UPDATE user_statistics SET player_money=player_money+? WHERE id=?", array(self.score, self.guid));
-        self tell("You have deposited ^5$" + self.score + "^7 into your bank account");
+        self tell("You have deposited ^5$" + utility_format_number(self.score) + "^7 into your bank account");
         self.score = 0;
         return;
 
     database_query("UPDATE user_statistics SET player_money=player_money+? WHERE id=?", array(args[1], self.guid));
-    self tell("You have deposited ^5$" + args[1] + "^7 into your bank account");
+    self tell("You have deposited ^5$" + utility_format_number(args[1]) + "^7 into your bank account");
     self.score -= int(args[1]);
 }

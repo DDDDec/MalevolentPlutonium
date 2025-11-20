@@ -24,15 +24,15 @@ command_account_levelup(args)
     next_level = int(account[0][0]["player_level"]) + 1;
 
     if (int(account[0][0]["player_money"]) <= int(next_level_money)) {
-        self tell("You cannot afford to levelup you need ^5$" + next_level);
+        self tell("[^5LevelUp^7] You cannot afford to levelup you need ^5$" + utility_format_number(next_level));
         return;
     }
 
-    if (args[1] == "all") {
+    if (isDefined(args[1]) && args[1] == "all") {
         self tell("[^5LevelUp^7] You have levelled up as many times as you can afford");
         return;
     }
 
     account = database_query("UPDATE user_statistics SET player_money=player_money-?, player_level=player_level+1 WHERE id=?", array(next_level_money, self.guid));
-    self tell("[^5LevelUp^7] You have levelled up to ^5" + next_level + "^7 for ^5$" + next_level_money);
+    self tell("[^5LevelUp^7] You have levelled up to ^5" + next_level + "^7 for ^5$" + utility_format_number(next_level_money));
 }

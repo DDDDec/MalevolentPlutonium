@@ -33,12 +33,12 @@ command_bank_withdraw(args)
 
     if (args[1] == "all" || int(args[1]) > int(money))
         database_query("UPDATE user_statistics SET player_money=player_money-? WHERE id=?", array(money, self.guid));
-        self tell("You have withdrawn ^5$" + money + "^7 from your bank account");
+        self tell("You have withdrawn ^5$" + utility_format_number(money) + "^7 from your bank account");
         self.score = 1000000;
         return;
 
     database_query("UPDATE user_statistics SET player_money=player_money-? WHERE id=?", array(args[1], self.guid));
-    self tell("You have withdraw ^5$" + args[1] + "^7 from your bank account");
+    self tell("You have withdraw ^5$" + utility_format_number(args[1]) + "^7 from your bank account");
     self.score += int(args[1]);
     return;
 }
