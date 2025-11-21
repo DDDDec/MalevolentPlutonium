@@ -215,9 +215,35 @@ header .header i {
     margin: 0;
 }
 .newspaper div:first-child .title,
-.newspaper div:first-child .description {
+.newspaper div:first-child .description,
+.newspaper div:first-child .author {
     position: relative;
     transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.newspaper .author {
+    width: 100%;
+    padding: 20px 0 10px 0;
+    display: inline-block;
+}
+.newspaper .author a {
+    text-decoration: none;
+}
+.newspaper .author a:hover span {
+    color: #599bfa;
+}
+.newspaper .author img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: -4px;
+}
+.newspaper .author span {
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    padding-left: 39px;
+    transition: 0.2s;
 }
 
 .serverlist {

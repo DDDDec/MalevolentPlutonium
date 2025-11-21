@@ -5,19 +5,45 @@ Malevolent Plutonium is a custom server and tools project themed around a zombie
 
 ## Prerequisites
 
-    - PHP 8.2+ 
+    - PHP 8.2+
     - MYSQL 8.x+
     - Composer Version 2
 
-## Development Setup Tutorial
+## Website Setup Tutorial
 
-    1. git clone https://github.com/DDDDec/MalevolentPlutonium.git
+    git clone https://github.com/DDDDec/MalevolentPlutonium.git
     2. cd malevolentwebsite
     3. copy .env.example .env
     4. composer install
     5. php artisan migrate
     6. php artisan key:generate
     7. php artisan serve
+
+## Scripts Setup Tutorial
+
+    1. create the same directory design into your /scripts/zm folder
+    2. compile the scripts and drop them into their designated folders
+    3. remove the -compiled from all compiled file names
+
+
+```
+Copy and paste this inside of all your plutonium configuration files
+
+///////////////////////////////////
+// MALEVOLENT DATABASE SETTINGS  //
+///////////////////////////////////
+set mysql_host "127.0.0.1"       //
+set mysql_user "root"            //
+set mysql_pass ""                //
+set mysql_port 3306              //
+set mysql_db "malevolentwebsite" // 
+///////////////////////////////////
+```
+
+## Plugin Setup Tutorial
+
+    1. copy MalevolentPlugin.dll from the 'MalavolentPlugin' folder
+    2. paste MalevolentPlugin.dll inside the plugins folder for your servers 
 
 ## Contributing
 
