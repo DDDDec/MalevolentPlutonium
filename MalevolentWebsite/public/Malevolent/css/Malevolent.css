@@ -174,7 +174,6 @@ header .header i {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "newspaper newspaper";
     gap: 15px;
     padding: 25px;
     box-sizing: border-box;
@@ -191,14 +190,8 @@ header .header i {
     border-radius: 10px;
     overflow: hidden;
 }
-.newspaper div:first-child {
-    grid-area: newspaper;
-}
 .newspaper div .title {
     font-size: 18px;
-}
-.newspaper div:first-child .title {
-    font-size: 26px;
 }
 .newspaper progress {
     height: 5px;
@@ -412,6 +405,8 @@ header .header i {
     font-size: 14px;
     padding: 15px 0;
 }
+
+
 
 footer {
     width: 100%;

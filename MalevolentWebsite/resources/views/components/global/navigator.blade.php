@@ -2,17 +2,7 @@
     <div class="container">
         <div class="navigator">
             <div>
-                <div class="menu">
-                    <a><li>Homepage <i class="fa-solid fa-angle-up"></i></li></a>
-                    <div class="menu-content">
-                        <a href="/" wire:navigate><li><i class="fa-solid fa-house"></i> Homepage</li></a>
-                        <div class="divider"></div>
-                        <a href="/newspaper" wire:navigate><li><i class="fa-solid fa-newspaper"></i> Newspaper</li></a>
-                        <a href="/radio" wire:navigate><li><i class="fa-solid fa-music"></i> Radio Station</li></a>
-                        <div class="divider"></div>
-                        <a href="/team" wire:navigate><li><i class="fa-solid fa-users"></i> Meet The Team</li></a>
-                    </div>
-                </div>
+                <a href="/" wire:navigate><li>Homepage</li></a>
                 <div class="menu">
                     <a><li>Community <i class="fa-solid fa-angle-up"></i></li></a>
                     <div class="menu-content">
@@ -40,8 +30,8 @@
                 <div class="menu">
                     <a><li>Account <i class="fa-solid fa-angle-up"></i></li></a>
                     <div class="menu-content">
-                        <a href="/login" wire:navigate><li><i class="fa-solid fa-user-plus"></i> Register</li></a>
-                        <a href="/register" wire:navigate><li><i class="fa-solid fa-right-to-bracket"></i> Login</li></a>
+                        <a href="/login" wire:navigate><li><i class="fa-solid fa-right-to-bracket"></i> Login</li></a>
+                        <a href="/register" wire:navigate><li><i class="fa-solid fa-user-plus"></i> Register</li></a>
                         <div class="divider"></div>
                         <a href="/forgot" wire:navigate><li><i class="fa-solid fa-key"></i> Forgot Password</li></a>
                     </div>

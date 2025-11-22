@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string('newspaper_title');
             $table->string('newspaper_short_description');
             $table->string('newspaper_long_description');
+            $table->string('newspaper_avatar');
             $table->string('newspaper_author');
-
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamps();
         });
     }
 

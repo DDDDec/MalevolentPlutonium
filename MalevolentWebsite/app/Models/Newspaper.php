@@ -15,16 +15,7 @@ class Newspaper extends Model
         'newspaper_title',
         'newspaper_short_description',
         'newspaper_long_description',
+        'newspaper_avatar',
         'newspaper_author',
-    ];
-
-    /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [
-        'created_at',
-        'updated_at'
     ];
 }

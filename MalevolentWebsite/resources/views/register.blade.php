@@ -13,7 +13,7 @@
             <div class="content">
                 <div>
 
-
+                    <x-content.register.form/>
 
                 </div>
                 <div>
