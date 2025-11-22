@@ -526,7 +526,6 @@ form input {
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
     color: #ffffff75;
-
 }
 .register-information a {
     text-decoration: none;
@@ -534,6 +533,24 @@ form input {
     transition: 0.2s;
 }
 .register-information a:hover {
+    text-decoration: none;
+    color: #599bfa;
+}
+
+.forgot-information {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    color: #ffffff75;
+}
+.forgot-information a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.forgot-information a:hover {
     text-decoration: none;
     color: #599bfa;
 }
