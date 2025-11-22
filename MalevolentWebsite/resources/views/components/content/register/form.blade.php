@@ -3,6 +3,7 @@
     <input type="email" name="emailconfirmation" placeholder="Please confirm your email">
     <input type="password" name="password" placeholder="Please insert your password">
     <input type="password" name="passwordconfirmation" placeholder="Please confirm your password">
+    <input type="password" name="plutoniumcode" placeholder="Please insert your in game code">
 
     <div class="checkbox">
         <input id="c1-13" name="remember" type="checkbox">

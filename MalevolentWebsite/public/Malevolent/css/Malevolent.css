@@ -284,9 +284,53 @@ header .header i {
     padding-bottom: 6px;
 }
 
+.features {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.features .features-section {
+    width: 100%;
+    background: #a7a7a70d;
+    border: 2px solid #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+.features .features-section .title {
+    color: white;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.features .features-section i {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background: #599bfa;
+    margin-right: 10px;
+}
+.features .features-section .description {
+    color: #ffffffcc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+
 .server-statistics {
     width: 100%;
     margin-top: 50px;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
 }
 .server-statistics .server-statistics-grid {
     width: 100%;
@@ -296,9 +340,10 @@ header .header i {
 }
 .server-statistics .server-statistics-grid .server-statistics-grid-section {
     width: 100%;
-    padding: 35px;
+    padding: 35px 0;
     box-sizing: border-box;
     border-radius: 10px;
+    background: #a7a7a70d;
     border: 2px solid #a7a7a70d;
 }
 .server-statistics .server-statistics-grid .server-statistics-grid-section .title {
@@ -443,6 +488,31 @@ form input {
 .login-information a:hover {
     text-decoration: none;
     color: #599bfa;
+}
+.login-social {
+    color: #ffffff75;
+    padding: 15px 25px 25px 25px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+.login-social a {
+    width: 100%;
+    display: inline-block;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #ffffff35;
+    color: white;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: 0.2s;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 13px;
 }
 
 .register-information {
