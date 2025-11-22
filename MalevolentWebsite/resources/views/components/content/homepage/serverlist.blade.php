@@ -148,5 +148,3 @@
         </div>
     </div>
 </div>
-
-<script src="{{ asset('Malevolent/js/serverlist.js') }}"></script>

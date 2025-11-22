@@ -3,29 +3,29 @@
         array(
             'author' => 'Dec',
             'image' => asset('Malevolent/images/Dec.webp'),
-            'title' => 'Malevolent Plutonium Project 1',
-            'description' => 'This is a long description about the new and upcoming project called Malevolent which is for Plutonium Black Ops 2 zombies.',
+            'title' => 'Malevolent Bot',
+            'description' => 'Malevolent bot is a bot for discord providing access to the data collected from the game servers to display via commands on discord.',
             'created_at' => '2025-11-20 17:00:24'
         ),
         array(
             'author' => 'Dec',
             'image' => asset('Malevolent/images/Dec.webp'),
-            'title' => 'Malevolent Plutonium Project 2',
-            'description' => 'This is a long description about the new and upcoming project called Malevolent which is for Plutonium Black Ops 2 zombies.',
+            'title' => 'Malevolent Plugin',
+            'description' => 'Malevolent plugin is a plugin built in C++ by Alice with modifications by Dec providing changes to the chat and additions to GSC.',
             'created_at' => '2025-11-20 17:00:24'
         ),
         array(
             'author' => 'Dec',
             'image' => asset('Malevolent/images/Dec.webp'),
-            'title' => 'Malevolent Plutonium Project 3',
-            'description' => 'This is a long description about the new and upcoming project called Malevolent which is for Plutonium Black Ops 2 zombies.',
+            'title' => 'Malevolent Scripts',
+            'description' => 'Malevolent scripts is the back bone of the servers providing modifications to the game with features like bank, gambling and more.',
             'created_at' => '2025-11-20 17:00:24'
         ),
         array(
             'author' => 'Dec',
             'image' => asset('Malevolent/images/Dec.webp'),
-            'title' => 'Malevolent Plutonium Project 4',
-            'description' => 'This is a long description about the new and upcoming project called Malevolent which is for Plutonium Black Ops 2 zombies.',
+            'title' => 'Malevolent Website',
+            'description' => 'Malevolent website is the front-end for the servers displaying data in collections & charts to give your more oversight of statistics.',
             'created_at' => '2025-11-20 17:00:24'
         ),
     );
