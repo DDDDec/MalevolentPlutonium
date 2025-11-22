@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ServerActions extends Model
+class Newspaper extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,8 +12,10 @@ class ServerActions extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'server_name',
-        'server_action',
+        'newspaper_title',
+        'newspaper_short_description',
+        'newspaper_long_description',
+        'newspaper_author',
     ];
 
     /**

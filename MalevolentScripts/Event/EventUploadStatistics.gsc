@@ -29,15 +29,15 @@ event_upload_statistics()
     foreach(player in players)
         database_query(
             "UPDATE user_statistics SET
-            player_money=player_money+?,
-            player_joins=player_joins+1,
-            player_kills=player_kills+?,
-            player_downs=player_downs+?,
-            player_revives=player_revives+?,
-            player_headshots=player_headshots+?,
-            player_distance=player_distance+?,
-            player_dog_kills=player_dog_kills+?,
-            player_boss_kills=player_boss_kills+? WHERE id=?",
+            user_money=user_money+?,
+            user_joins=user_joins+1,
+            user_kills=user_kills+?,
+            user_downs=user_downs+?,
+            user_revives=user_revives+?,
+            user_headshots=user_headshots+?,
+            user_distance=user_distance+?,
+            user_dog_kills=user_dog_kills+?,
+            user_boss_kills=user_boss_kills+? WHERE id=?",
 
             array(
                 self.score,

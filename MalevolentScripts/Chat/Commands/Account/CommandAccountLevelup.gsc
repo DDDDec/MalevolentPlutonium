@@ -20,35 +20,35 @@ command_account_levelup(args)
     }
 
     account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
-    next_level_money = int(account[0][0]["player_level"]) * 50000;
-    next_level = int(account[0][0]["player_level"]) + 1;
+    next_level_money = int(account[0][0]["user_level"]) * 50000;
+    next_level = int(account[0][0]["user_level"]) + 1;
 
-    if (int(account[0][0]["player_money"]) <= int(next_level_money)) {
+    if (int(account[0][0]["user_money"]) <= int(next_level_money)) {
         self tell("[^5LevelUp^7] You cannot afford to levelup you need ^5$" + utility_format_number(next_level_money));
         return;
     }
 
     if (isDefined(args[1]) && args[1] == "all") {
-        while (int(account[0][0]["player_level"]) < 65) {
-            if (int(account[0][0]["player_money"]) < int(next_level_money)) {
+        while (int(account[0][0]["user_level"]) < 65) {
+            if (int(account[0][0]["user_money"]) < int(next_level_money)) {
                 break;
             }
 
-            account[0][0]["player_level"] = int(account[0][0]["player_level"]) + 1;
-            account[0][0]["player_money"] = int(account[0][0]["player_money"]) - int(next_level_money);
-            next_level_money = int(account[0][0]["player_level"]) * 50000;
-            next_level = int(account[0][0]["player_level"]) + 1;
+            account[0][0]["user_level"] = int(account[0][0]["user_level"]) + 1;
+            account[0][0]["user_money"] = int(account[0][0]["user_money"]) - int(next_level_money);
+            next_level_money = int(account[0][0]["user_level"]) * 50000;
+            next_level = int(account[0][0]["user_level"]) + 1;
         }
 
-        database_query("UPDATE user_statistics SET player_level=?, player_money=? WHERE id=?", array(account[0][0]["player_level"], account[0][0]["player_money"], self.guid));
-        database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has leveled up to level " + account[0][0]["player_level"]));
+        database_query("UPDATE user_statistics SET user_level=?, user_money=? WHERE id=?", array(account[0][0]["user_level"], account[0][0]["user_money"], self.guid));
+        database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)",  array(self.name, "has leveled up to level " + account[0][0]["user_level"]));
 
         self tell("[^5LevelUp^7] You have levelled up as many times as you can afford");
 
         return;
     }
 
-    database_query("UPDATE user_statistics SET player_money=player_money-?, player_level=player_level+1 WHERE id=?", array(next_level_money, self.guid));
-    database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has leveled up to level " + next_level));
+    database_query("UPDATE user_statistics SET user_money=user_money-?, user_level=user_level+1 WHERE id=?", array(next_level_money, self.guid));
+    database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)",  array(self.name, "has leveled up to level " + next_level));
     self tell("[^5LevelUp^7] You have levelled up to ^5" + next_level + "^7 for ^5$" + utility_format_number(next_level_money));
 }

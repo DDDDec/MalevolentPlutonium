@@ -21,7 +21,9 @@ return new class extends Migration
             $table->integer('server_downs')->default(0);
             $table->integer('server_revives')->default(0);
             $table->integer('server_headshots')->default(0);
-            $table->timestamps();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

@@ -29,13 +29,13 @@ command_bank_pay(args)
 
     account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
 
-    if (int(args[1]) > int(account[0][0]["player_money"])) {
+    if (int(args[1]) > int(account[0][0]["user_money"])) {
         self tell("[^5Pay^7] You cannot pay money you do not have");
         return;
     }
 
-    database_query("UPDATE user_statistics SET player_money=player_money+? WHERE name LIKE ?", array(args[1], "%" + args[2] + "%"));
-    database_query("UPDATE user_statistics SET player_money=player_money-? WHERE id=?", array(args[1], self.guid));
+    database_query("UPDATE user_statistics SET user_money=user_money+? WHERE name LIKE ?", array(args[1], "%" + args[2] + "%"));
+    database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(args[1], self.guid));
     database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has just paid £" + utility_format_number(args[1]) + " into " + args[2] + "'s bank"));
     self tell("[^5Pay^7] You paid ^5$" + utility_format_number(args[1]) + "^7 to ^5" + args[2]);
 }

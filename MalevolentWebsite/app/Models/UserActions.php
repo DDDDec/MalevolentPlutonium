@@ -12,8 +12,8 @@ class UserActions extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'action',
+        'user_name',
+        'user_action',
     ];
 
     /**

@@ -32,12 +32,9 @@ command_gamble_bet(args)
         return;
     }
 
-    account = database_query(
-        "SELECT * FROM user_statistics WHERE id=?",
-        array(self.guid)
-    );
+    account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
 
-    if (int(args[1]) > int(account[0][0]["player_money"])) {
+    if (int(args[1]) > int(account[0][0]["user_money"])) {
         self tell("[^5Bet^7] You cannot bet more money than you have in your bank account");
         return;
     }
@@ -46,26 +43,14 @@ command_gamble_bet(args)
         if (cointoss()) {
             self tell("[^5Bet^7] You have won your bet against the server and won ^5$" + args[1]);
 
-            update = database_query(
-                "UPDATE user_statistics SET player_money=player_money+? WHERE id=?",
-                array(args[1], self.guid)
-            );
-            insert = database_query(
-                "INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",
-                array(self.name, "Won $" + args[1] + " from gambling")
-            );
+            database_query("UPDATE user_statistics SET user_money=user_money+? WHERE id=?", array(args[1], self.guid));
+            database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, "Won $" + args[1] + " from gambling"));
             return;
         }
 
         self tell("[^5Bet^7] You have lost your bet against the server and lost ^5$" + args[1]);
 
-        update = database_query(
-            "UPDATE user_statistics SET player_money=player_money-? WHERE id=?",
-            array(args[1], self.guid)
-        );
-        update = database_query(
-            "INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",
-            array(self.name, "Lost $" + args[1] + " from gambling")
-        );
+        database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(args[1], self.guid));
+        database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, "Lost $" + args[1] + " from gambling"));
     }
 }

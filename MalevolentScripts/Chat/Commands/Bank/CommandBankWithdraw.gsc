@@ -26,13 +26,13 @@ command_bank_withdraw(args)
 
     account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
 
-    if (int(account[0][0]["player_money"]) == 0) {
+    if (int(account[0][0]["user_money"]) == 0) {
         self tell("[^5Withdraw^7] You don't have any money in your bank account");
         return;
     }
 
     if (args[1] == "all" || int(args[1]) > int(money)) {
-        database_query("UPDATE user_statistics SET player_money=player_money-? WHERE id=?", array(money, self.guid));
+        database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(money, self.guid));
         self tell("[^5Withdraw^7] You have withdrawn ^5$" + utility_format_number(money) + "^7 from your bank account");
         self.score = 1000000;
         return;

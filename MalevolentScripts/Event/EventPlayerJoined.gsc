@@ -12,5 +12,5 @@
 //////////////////////////////////////////
 event_player_joined()
 {
-    database_query("INSERT INTO server_joins (`player_name`) VALUES (?)", array(self.name));
+    database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, self.name + " just joined the " + utility_get_map() + " server"));
 }

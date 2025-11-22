@@ -45,5 +45,5 @@ event_upload_leaderboard()
 
         iteration += 1;
 
-    database_query("INSERT INTO server_leaderboards (`map`,`players`,`round`,`kills`) VALUES (?,?,?,?)", array(utility_get_map(), list, level.round, kills));
+    database_query("INSERT INTO server_leaderboards (`server_map`,`server_players`,`server_round`,`server_kills`) VALUES (?,?,?,?)", array(utility_get_map(), list, level.round, kills));
 }

@@ -16,9 +16,9 @@ command_account_details(args)
 
     details = array(
         "[^5Account^7] GUID: " + self.guid,
-        "[^5Account^7] Rank: " + account[0][0]["player_rank"],
-        "[^5Account^7] Level: " + account[0][0]["player_level"],
-        "[^5Account^7] Prestige: " + account[0][0]["player_prestige"]
+        "[^5Account^7] Rank: " + account[0][0]["user_rank"],
+        "[^5Account^7] Level: " + account[0][0]["user_level"],
+        "[^5Account^7] Prestige: " + account[0][0]["user_prestige"]
     );
 
     foreach(message in details)
