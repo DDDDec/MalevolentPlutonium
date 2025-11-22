@@ -13,12 +13,12 @@
             <div class="content">
                 <div>
 
-
+                    <x-content.account.forgot.form/>
 
                 </div>
                 <div>
 
-
+                    <x-content.account.forgot.information/>
 
                 </div>
             </div>

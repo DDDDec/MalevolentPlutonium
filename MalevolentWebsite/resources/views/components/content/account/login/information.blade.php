@@ -9,4 +9,3 @@
     of your account. If you do not agree with these terms or how we handle your
     information, please do not log in.
 </div>
-

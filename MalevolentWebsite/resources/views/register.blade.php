@@ -13,12 +13,12 @@
             <div class="content">
                 <div>
 
-                    <x-content.register.form/>
+                    <x-content.account.register.form/>
 
                 </div>
                 <div>
 
-                    <x-content.register.information/>
+                    <x-content.account.register.information/>
 
                 </div>
             </div>

@@ -514,6 +514,10 @@ form input {
     text-decoration: none;
     font-size: 13px;
 }
+.login-social a:hover {
+    border: 2px solid #599bfa;
+    box-shadow: 0px 0px 10px 0px #599bfa;
+}
 
 .register-information {
     width: 100%;
