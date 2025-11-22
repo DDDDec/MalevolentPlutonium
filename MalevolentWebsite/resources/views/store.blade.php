@@ -13,12 +13,13 @@
             <div class="content">
                 <div>
 
-
+                    <x-content.store.colors/>
 
                 </div>
                 <div>
 
-
+                    <x-content.store.wallet/>
+                    <x-content.store.purchases/>
 
                 </div>
             </div>

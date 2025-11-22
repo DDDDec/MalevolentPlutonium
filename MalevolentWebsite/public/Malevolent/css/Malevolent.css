@@ -265,9 +265,12 @@ header .header i {
     position: relative;
     height: 105px;
     padding-left: 15px;
-    padding-right: 10px;
+    padding-right: 15px;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
+}
+.serverlist .serverlist-grid .serverlist-grid-section progress {
+    box-sizing: border-box;
 }
 .serverlist .serverlist-grid .serverlist-grid-section .title {
     color: white;
@@ -448,6 +451,87 @@ header .header i {
     color: #ffffffcc;
     font-size: 14px;
     padding: 15px 0;
+}
+
+.colors {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.colors .colors-section {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+.colors .colors-section .title {
+    color: white;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.colors .colors-section .title i {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background: #599bfa;
+    margin-right: 10px;
+}
+.colors .colors-section .description {
+    color: #ffffffcc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.colors .colors-section a {
+    width: 100%;
+    display: inline-block;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #ffffff35;
+    color: white;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: 0.2s;
+    margin-top: 5px;
+    text-decoration: none;
+    font-size: 13px;
+}
+.colors .colors-section a:hover {
+    border: 2px solid #599bfa;
+    box-shadow: 0px 0px 10px 0px #599bfa;
+}
+
+.wallet {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.purchases {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
 form {
