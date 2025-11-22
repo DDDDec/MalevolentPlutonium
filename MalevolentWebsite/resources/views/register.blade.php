@@ -18,7 +18,7 @@
                 </div>
                 <div>
 
-
+                    <x-content.register.information/>
 
                 </div>
             </div>

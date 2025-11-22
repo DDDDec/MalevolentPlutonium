@@ -21,7 +21,6 @@ body {
     background: url(../images/header.webp) center center no-repeat;
     background-size: cover;
     height: calc(80vh);
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
     z-index: -1;
     opacity: 0.2;
@@ -406,7 +405,64 @@ header .header i {
     padding: 15px 0;
 }
 
+form {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+form .checkbox {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+form label {
+    color: white;
+}
+form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    background: none;
+}
 
+.login-information {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    color: #ffffff75;
+}
+.login-information a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.login-information a:hover {
+    text-decoration: none;
+    color: #599bfa;
+}
+
+.register-information {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    color: #ffffff75;
+
+}
+.register-information a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.register-information a:hover {
+    text-decoration: none;
+    color: #599bfa;
+}
 
 footer {
     width: 100%;
@@ -427,7 +483,7 @@ footer .footer div:first-child {
 footer .footer div:last-child {
     display: flex;
     justify-content: end;
-    padding-top: 12.5px;
+    padding-top: 12px;
 }
 footer .footer div:last-child a li {
     color: white;

@@ -6,7 +6,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="1"
                     max="8"
                 ></progress>
             </div>
@@ -15,7 +15,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="3"
                     max="8"
                 ></progress>
             </div>
@@ -24,7 +24,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="6"
                     max="8"
                 ></progress>
             </div>
@@ -33,7 +33,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="8"
                     max="8"
                 ></progress>
             </div>
@@ -42,7 +42,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="1"
                     max="8"
                 ></progress>
             </div>
@@ -51,7 +51,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="3"
                     max="8"
                 ></progress>
             </div>
@@ -60,7 +60,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="6"
                     max="8"
                 ></progress>
             </div>
@@ -69,7 +69,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="8"
                     max="8"
                 ></progress>
             </div>
@@ -78,7 +78,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="1"
                     max="8"
                 ></progress>
             </div>
@@ -87,7 +87,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="3"
                     max="8"
                 ></progress>
             </div>
@@ -96,7 +96,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="6"
                     max="8"
                 ></progress>
             </div>
@@ -105,7 +105,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="8"
                     max="8"
                 ></progress>
             </div>
@@ -114,7 +114,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="1"
                     max="8"
                 ></progress>
             </div>
@@ -123,7 +123,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="3"
                     max="8"
                 ></progress>
             </div>
@@ -132,7 +132,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="6"
                     max="8"
                 ></progress>
             </div>
@@ -141,7 +141,7 @@
                 <div class="description">Nuketown</div>
                 <progress
                     class="progress"
-                    value="4"
+                    value="8"
                     max="8"
                 ></progress>
             </div>

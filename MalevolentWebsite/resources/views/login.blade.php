@@ -18,7 +18,7 @@
                 </div>
                 <div>
 
-
+                    <x-content.login.information/>
 
                 </div>
             </div>
