@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Servers extends Model
+class Serverlist extends Model
 {
     /**
      * The attributes that are mass assignable.
