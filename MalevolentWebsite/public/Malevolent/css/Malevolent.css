@@ -764,45 +764,41 @@ form input {
     box-sizing: border-box;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 15px;
     margin-top: 50px;
 }
-.mission .placeholder {
+.mission .mission-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.mission .mission-grid .mission-grid-section {
     width: 100%;
     background: #a7a7a70d;
     box-sizing: border-box;
     position: relative;
+    height: 105px;
     padding-left: 15px;
-    padding-right: 10px;
+    padding-right: 15px;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
 }
-.mission .placeholder .title {
-    font-weight: 600;
-    margin-top: 18px;
-    padding-left: 40px;
+.mission .mission-grid .mission-grid-section progress {
+    box-sizing: border-box;
 }
-.mission .placeholder .title a {
-    text-decoration: none;
+.mission .mission-grid .mission-grid-section .title {
     color: white;
-    transition: 0.2s;
+    font-weight: 600;
+    margin-top: 10px;
 }
-.mission .placeholder .title a:hover {
+.mission .mission-grid .mission-grid-section .title i {
     color: #599bfa;
+    margin-right: 5px;
 }
-.mission .placeholder img {
-    width: 30px;
-    border-radius: 100%;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
-.mission .placeholder .description {
+.mission .mission-grid .mission-grid-section .description {
     color: #ffffffcc;
-    font-size: 14px;
-    padding: 15px 0;
+    font-size: 15px;
+    padding-bottom: 6px;
 }
 
 .achievement {
@@ -811,45 +807,41 @@ form input {
     box-sizing: border-box;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 15px;
     margin-top: 50px;
 }
-.achievement .placeholder {
+.achievement .achievement-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.achievement .achievement-grid .achievement-grid-section {
     width: 100%;
     background: #a7a7a70d;
     box-sizing: border-box;
     position: relative;
+    height: 105px;
     padding-left: 15px;
-    padding-right: 10px;
+    padding-right: 15px;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
 }
-.achievement .placeholder .title {
-    font-weight: 600;
-    margin-top: 18px;
-    padding-left: 40px;
+.achievement .achievement-grid .achievement-grid-section progress {
+    box-sizing: border-box;
 }
-.achievement .placeholder .title a {
-    text-decoration: none;
+.achievement .achievement-grid .achievement-grid-section .title {
     color: white;
-    transition: 0.2s;
+    font-weight: 600;
+    margin-top: 10px;
 }
-.achievement .placeholder .title a:hover {
+.achievement .achievement-grid .achievement-grid-section .title i {
     color: #599bfa;
+    margin-right: 5px;
 }
-.achievement .placeholder img {
-    width: 30px;
-    border-radius: 100%;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
-.achievement .placeholder .description {
+.achievement .achievement-grid .achievement-grid-section .description {
     color: #ffffffcc;
-    font-size: 14px;
-    padding: 15px 0;
+    font-size: 15px;
+    padding-bottom: 6px;
 }
 
 .statistics {

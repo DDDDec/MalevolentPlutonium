@@ -1,34 +1,150 @@
 <div class="mission">
-    <div class="placeholder">
-        <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
-        </div>
-        <div class="description">
-            Dec bet £100,000 and lost against Teddy
-        </div>
-    </div>
-    <div class="placeholder">
-        <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
-        </div>
-        <div class="description">
-            Dec bet £100,000 and lost against Teddy
-        </div>
-    </div>
-    <div class="placeholder">
-        <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
-        </div>
-        <div class="description">
-            Dec bet £100,000 and lost against Teddy
-        </div>
-    </div>
-    <div class="placeholder">
-        <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
-        </div>
-        <div class="description">
-            Dec bet £100,000 and lost against Teddy
+    <div class="vertical-scroll">
+        <div class="mission-grid">
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="1"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="3"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="6"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="8"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="1"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="3"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="6"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="8"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="1"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="3"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="6"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="8"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="1"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="3"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="6"
+                    max="8"
+                ></progress>
+            </div>
+            <div class="mission-grid-section">
+                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
+                <div class="description">Nuketown</div>
+                <progress
+                    class="progress"
+                    value="8"
+                    max="8"
+                ></progress>
+            </div>
         </div>
     </div>
 </div>
