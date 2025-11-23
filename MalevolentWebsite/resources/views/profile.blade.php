@@ -14,6 +14,8 @@
                 <div>
 
                     <x-content.account.profile.avatar/>
+                    <x-content.account.profile.mission/>
+                    <x-content.account.profile.achievement/>
 
                 </div>
                 <div>

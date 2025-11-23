@@ -758,6 +758,193 @@ form input {
     font-weight: 600;
 }
 
+.mission {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    margin-top: 50px;
+}
+.mission .placeholder {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 10px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+.mission .placeholder .title {
+    font-weight: 600;
+    margin-top: 18px;
+    padding-left: 40px;
+}
+.mission .placeholder .title a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.mission .placeholder .title a:hover {
+    color: #599bfa;
+}
+.mission .placeholder img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.mission .placeholder .description {
+    color: #ffffffcc;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+.achievement {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    margin-top: 50px;
+}
+.achievement .placeholder {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 10px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+.achievement .placeholder .title {
+    font-weight: 600;
+    margin-top: 18px;
+    padding-left: 40px;
+}
+.achievement .placeholder .title a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.achievement .placeholder .title a:hover {
+    color: #599bfa;
+}
+.achievement .placeholder img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.achievement .placeholder .description {
+    color: #ffffffcc;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+.statistics {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+}
+.statistics .placeholder {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 10px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+.statistics .placeholder .title {
+    font-weight: 600;
+    margin-top: 18px;
+    padding-left: 40px;
+}
+.statistics .placeholder .title a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.statistics .placeholder .title a:hover {
+    color: #599bfa;
+}
+.statistics .placeholder img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.statistics .placeholder .description {
+    color: #ffffffcc;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+.activity {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+    margin-top: 50px;
+}
+.activity .placeholder {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 10px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+.activity .placeholder .title {
+    font-weight: 600;
+    margin-top: 18px;
+    padding-left: 40px;
+}
+.activity .placeholder .title a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.activity .placeholder .title a:hover {
+    color: #599bfa;
+}
+.activity .placeholder img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.activity .placeholder .description {
+    color: #ffffffcc;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
 footer {
     width: 100%;
     border-top: 2px solid #ffffff1c;
