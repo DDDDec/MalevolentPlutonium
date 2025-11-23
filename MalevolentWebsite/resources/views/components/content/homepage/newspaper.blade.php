@@ -39,7 +39,7 @@
                 <p class="description news-description" data-index="0">{{ $newspaper['description'] }}</p>
                 <div class="author news-author" data-index="0">
                     <a href="/">
-                        <img src="{{ $newspaper['image'] }}" alt="avatar">
+                        <img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}" alt="avatar">
                         <span>{{ $newspaper['author'] }}</span>
                     </a>
                     <div class="published">{{ Carbon\Carbon::parse($newspaper['created_at'])->format('F d, Y') }}</div>

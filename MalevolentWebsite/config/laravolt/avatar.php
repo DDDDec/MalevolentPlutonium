@@ -17,7 +17,7 @@ return [
     | Supported: "gd", "imagick"
     |
     */
-    'driver' => env('IMAGE_DRIVER', 'imagick'),
+    'driver' => env('IMAGE_DRIVER', 'gd'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,7 +58,7 @@ return [
     'responsive' => false,
 
     // Number of characters used as initials. If name consists of single word, the first N character will be used
-    'chars' => 2,
+    'chars' => 3,
 
     // font size
     'fontSize' => 48,

@@ -13,6 +13,8 @@
                         <a href="/register" wire:navigate><li><i class="fa-solid fa-user-plus"></i> Register</li></a>
                         <div class="divider"></div>
                         <a href="/forgot" wire:navigate><li><i class="fa-solid fa-key"></i> Forgot Password</li></a>
+                        <div class="divider"></div>
+                        <a href="/profile" wire:navigate><li><i class="fa-solid fa-user"></i> Profile</li></a>
                     </div>
                 </div>
             </div>
