@@ -13,12 +13,13 @@
             <div class="content">
                 <div>
 
-                <img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(18)->toBase64() }}"/>
+                    <x-content.account.profile.avatar/>
 
                 </div>
                 <div>
 
-
+                    <x-content.account.profile.statistics/>
+                    <x-content.account.profile.activity/>
 
                 </div>
             </div>
