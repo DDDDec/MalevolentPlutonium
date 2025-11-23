@@ -518,9 +518,55 @@ header .header i {
     box-sizing: border-box;
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+}
+.wallet .wallet-placeholder {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+.wallet .wallet-placeholder .title {
+    color: white;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.wallet .wallet-placeholder .title i {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background: #599bfa;
+    margin-right: 10px;
+}
+.wallet .wallet-placeholder .description {
+    color: #ffffffcc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.wallet .wallet-placeholder a {
+    width: 100%;
+    display: inline-block;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #ffffff35;
+    color: white;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: 0.2s;
+    margin-top: 5px;
+    text-decoration: none;
+    font-size: 13px;
+}
+.wallet .wallet-placeholder a:hover {
+    border: 2px solid #599bfa;
+    box-shadow: 0 0 10px 0 #599bfa;
 }
 
 .purchases {
@@ -530,8 +576,44 @@ header .header i {
     border: 2px solid #a7a7a70d;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto;
     gap: 15px;
+    margin-top: 50px;
+}
+.purchases .placeholder {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 10px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+}
+.purchases .placeholder .title {
+    font-weight: 600;
+    margin-top: 18px;
+    padding-left: 40px;
+}
+.purchases .placeholder .title a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.purchases .placeholder .title a:hover {
+    color: #599bfa;
+}
+.purchases .placeholder img {
+    width: 30px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.purchases .placeholder .description {
+    color: #ffffffcc;
+    font-size: 14px;
+    padding: 15px 0;
 }
 
 form {
