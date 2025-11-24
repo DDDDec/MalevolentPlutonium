@@ -1,4 +1,4 @@
-<div class="server-statistics">
+<div class="server-statistics" wire:poll.visible>
     <div class="vertical-scroll">
         <div class="server-statistics-grid">
             <div class="server-statistics-grid-section">

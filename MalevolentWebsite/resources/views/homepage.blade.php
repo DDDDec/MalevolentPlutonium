@@ -15,13 +15,13 @@
 
                     <livewire:content.homepage.newspaper/>
                     <livewire:content.homepage.serverlist/>
-                    <livewire:content.homepage.features/>
+                    <x-content.homepage.features/>
                     <livewire:content.homepage.statistics/>
 
                 </div>
                 <div>
 
-                    <livewire:content.homepage.player-actions/>
+                    <livewire:content.homepage.user-actions/>
                     <livewire:content.homepage.server-actions/>
 
                 </div>

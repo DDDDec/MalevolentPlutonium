@@ -1,4 +1,4 @@
-<div class="serverlist">
+<div class="serverlist" wire:poll.visible>
     <div class="vertical-scroll">
         <div class="serverlist-grid">
             <div class="serverlist-grid-section">

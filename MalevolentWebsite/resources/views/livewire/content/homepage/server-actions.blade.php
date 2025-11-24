@@ -1,4 +1,4 @@
-<div class="server-actions">
+<div class="server-actions" wire:poll.visible>
     <div class="placeholder">
         <div class="title">
             <a href="{{ config('app.url') }}/map/Nuketown"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Nuketown</a>
