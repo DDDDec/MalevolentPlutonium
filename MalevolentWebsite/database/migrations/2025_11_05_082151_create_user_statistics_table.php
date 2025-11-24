@@ -14,29 +14,29 @@ return new class extends Migration
         Schema::create('user_statistics', function (Blueprint $table) {
             $table->foreignId('id')->primary();
             $table->string('name')->unique();
-            $table->integer('player_rank')->default(0);
-            $table->integer('player_prestige')->default(0);
-            $table->integer('player_level')->default(1);
-            $table->integer('player_color')->default("7");
-            $table->integer('player_banned')->default(0);
-            $table->bigInteger('player_money')->default(100000);
-            $table->integer('player_code')->nullable();
+            $table->integer('user_rank')->default(0);
+            $table->integer('user_prestige')->default(0);
+            $table->integer('user_level')->default(1);
+            $table->integer('user_color')->default("7");
+            $table->integer('user_banned')->default(0);
+            $table->bigInteger('user_money')->default(100000);
+            $table->integer('user_code')->nullable();
 
-            $table->integer('player_joins')->default(0);
-            $table->integer('player_quits')->default(0);
-            $table->integer('player_kills')->default(0);
-            $table->integer('player_downs')->default(0);
-            $table->integer('player_revives')->default(0);
-            $table->integer('player_headshots')->default(0);
-            $table->integer('player_distance')->default(0);
-            $table->integer('player_dog_kills')->default(0);
+            $table->integer('user_joins')->default(0);
+            $table->integer('user_quits')->default(0);
+            $table->integer('user_kills')->default(0);
+            $table->integer('user_downs')->default(0);
+            $table->integer('user_revives')->default(0);
+            $table->integer('user_headshots')->default(0);
+            $table->integer('user_distance')->default(0);
+            $table->integer('user_dog_kills')->default(0);
 
-            $table->integer('player_boss_kills')->default(0);
-            $table->integer('player_missions_completed')->default(0);
-            $table->integer('player_chat_games_won')->default(0);
-            $table->integer('player_gambled')->default(0);
-            $table->integer('player_gambled_lost')->default(0);
-            $table->integer('player_gambled_won')->default(0);
+            $table->integer('user_boss_kills')->default(0);
+            $table->integer('user_missions_completed')->default(0);
+            $table->integer('user_chat_games_won')->default(0);
+            $table->integer('user_gambled')->default(0);
+            $table->integer('user_gambled_lost')->default(0);
+            $table->integer('user_gambled_won')->default(0);
 
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();

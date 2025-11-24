@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('user_actions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('action');
+            $table->string('user_name');
+            $table->string('user_action');
 
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();

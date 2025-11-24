@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('serverlists', function (Blueprint $table) {
+        Schema::create('servers', function (Blueprint $table) {
             $table->id();
             $table->string('server_ip');
             $table->integer('server_port')->unique();
@@ -22,9 +22,7 @@ return new class extends Migration
             $table->integer('server_downs')->default(0);
             $table->integer('server_revives')->default(0);
             $table->integer('server_headshots')->default(0);
-
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamps();
         });
     }
 
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('serverlists');
+        Schema::dropIfExists('servers');
     }
 };

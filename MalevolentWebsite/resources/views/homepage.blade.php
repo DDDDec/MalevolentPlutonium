@@ -14,7 +14,7 @@
                 <div>
 
                     <livewire:content.homepage.newspaper/>
-                    <livewire:content.homepage.serverlist/>
+                    <livewire:content.homepage.servers/>
                     <x-content.homepage.features/>
                     <livewire:content.homepage.statistics/>
 
