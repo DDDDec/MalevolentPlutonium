@@ -26,22 +26,18 @@ event_upload_statistics()
 
     players = getPlayers();
 
-    foreach(player in players)
-        database_query(
-            "UPDATE user_statistics SET
-            user_money=user_money+?,
-            user_joins=user_joins+1,
-            user_kills=user_kills+?,
-            user_downs=user_downs+?,
-            user_revives=user_revives+?,
-            user_headshots=user_headshots+?,
-            user_distance=user_distance+?,
-            user_dog_kills=user_dog_kills+?,
-            user_boss_kills=user_boss_kills+? WHERE id=?",
-
+    foreach(player in players) {
+        database_query("UPDATE user_statistics SET user_money=user_money+?, user_joins=user_joins+1, user_kills=user_kills+?, user_downs=user_downs+?, user_revives=user_revives+?, user_headshots=user_headshots+?, user_distance=user_distance+? WHERE id=?",
             array(
                 self.score,
+                1,
+                self.pers["kills"],
+                self.pers["downs"],
+                self.pers["revives"],
+                self.pers["headshots"],
+                self.pers["distance_traveled"],
                 self.guid
             )
         );
+    }
 }

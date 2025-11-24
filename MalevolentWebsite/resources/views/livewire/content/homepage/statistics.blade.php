@@ -19,19 +19,19 @@
             </div>
             <div class="server-statistics-grid-section">
                 <div class="title">Circulating</div>
-                <div class="description" data-target="{{ $userStatistics['statistics']->moneys }}">£{{ $userStatistics['statistics']->moneys }}</div>
+                <div class="description" data-target="{{ $userStatistics['statistics']->moneys }}">£{{ number_format($userStatistics['statistics']->moneys) }}</div>
             </div>
             <div class="server-statistics-grid-section">
                 <div class="title">Interest</div>
-                <div class="description" data-target="{{ $userStatistics['statistics']->interest }}">£{{ $userStatistics['statistics']->interest }}</div>
+                <div class="description" data-target="{{ $userStatistics['statistics']->interest }}">£{{ number_format($userStatistics['statistics']->interest) }}</div>
             </div>
             <div class="server-statistics-grid-section">
                 <div class="title">Lost Gambling</div>
-                <div class="description" data-target="{{ $userStatistics['statistics']->lostgambling }}">£{{ $userStatistics['statistics']->lostgambling }}</div>
+                <div class="description" data-target="{{ $userStatistics['statistics']->lostgambling }}">£{{ number_format($userStatistics['statistics']->lostgambling) }}</div>
             </div>
             <div class="server-statistics-grid-section">
                 <div class="title">Won Gambling</div>
-                <div class="description" data-target="{{ $userStatistics['statistics']->wongambling }}">£{{ $userStatistics['statistics']->wongambling }}</div>
+                <div class="description" data-target="{{ $userStatistics['statistics']->wongambling }}">£{{ number_format($userStatistics['statistics']->wongambling) }}</div>
             </div>
             <div class="server-statistics-grid-section">
                 <div class="title">Chat Games</div>

@@ -44,7 +44,7 @@ command_bank_withdraw(args)
     }
 
     database_query("UPDATE user_statistics SET player_money=player_money-? WHERE id=?", array(args[1], self.guid));
-    database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has just withdrawn £" + utility_format_number(args[1]) + " from their bank));
+    database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has just withdrawn £" + utility_format_number(args[1]) + " from their bank"));
     self tell("[^5Withdraw^7] You have withdraw ^5$" + utility_format_number(args[1]) + "^7 from your bank account");
     self.score += int(args[1]);
 }

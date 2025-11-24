@@ -12,5 +12,5 @@
 ///////////////////////////////////////////////
 event_server_started()
 {
-    database_query("INSERT INTO server_actions (`server_name`, `server_action`) VALUES (?, ?)", array(utility_get_map(), "The " + utility_get_map() + " has started and is ready to play"));
+    database_query("INSERT INTO server_actions (`server_name`, `server_action`) VALUES (?, ?)", array(utility_get_map(), "The " + utility_get_map() + " server has started and is ready to play"));
 }

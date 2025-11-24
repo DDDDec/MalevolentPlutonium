@@ -50,6 +50,6 @@ command_bank_share(args)
     }
 
     database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(share, self.guid));
-    database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has just paid £" + utility_format_number(args[1]) + " into the whole lobbies bank));
+    database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has just paid £" + utility_format_number(args[1]) + " into the whole lobbies bank"));
     self tell("[^5Share^7] You have sent ^5$" + utility_format_number(args[1]) + "^7 to all players in the lobby");
 }
