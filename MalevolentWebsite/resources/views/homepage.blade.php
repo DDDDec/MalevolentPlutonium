@@ -13,8 +13,8 @@
             <div class="content">
                 <div>
 
-                    <x-content.homepage.newspaper/>
-                    <livewire:content.homepage.serverlist/>
+                    <livewire:content.homepage.newspaper/>
+                    <x-content.homepage.serverlist/>
                     <x-content.homepage.features/>
                     <x-content.homepage.server-statistics/>
 
