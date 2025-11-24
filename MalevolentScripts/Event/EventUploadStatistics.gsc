@@ -24,20 +24,7 @@ event_upload_statistics()
 {
     level waittill("end_game");
 
-    players = getPlayers();
+    insert = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE id=?", array(self.score, self.guid));
 
-    foreach(player in players) {
-        database_query("UPDATE user_statistics SET user_money=user_money+?, user_joins=user_joins+1, user_kills=user_kills+?, user_downs=user_downs+?, user_revives=user_revives+?, user_headshots=user_headshots+?, user_distance=user_distance+? WHERE id=?",
-            array(
-                self.score,
-                1,
-                self.pers["kills"],
-                self.pers["downs"],
-                self.pers["revives"],
-                self.pers["headshots"],
-                self.pers["distance_traveled"],
-                self.guid
-            )
-        );
-    }
+    self tell("[^5Leaderboards^7] Your statistics have been uploaded & saved");
 }

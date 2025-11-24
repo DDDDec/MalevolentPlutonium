@@ -44,13 +44,13 @@ command_gamble_bet(args)
             self tell("[^5Bet^7] You have won your bet against the server and won ^5$" + args[1]);
 
             database_query("UPDATE user_statistics SET user_money=user_money+? WHERE id=?", array(args[1], self.guid));
-            database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, "Won $" + args[1] + " from gambling"));
+            database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, "Won £" + args[1] + " from gambling"));
             return;
         }
 
         self tell("[^5Bet^7] You have lost your bet against the server and lost ^5$" + args[1]);
 
         database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(args[1], self.guid));
-        database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, "Lost $" + args[1] + " from gambling"));
+        database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, "Lost £" + args[1] + " from gambling"));
     }
 }

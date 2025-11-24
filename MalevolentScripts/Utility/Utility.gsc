@@ -168,11 +168,11 @@ utility_player_names_string()
     {
         if (names == "")
     	{
-    	    names = players[i].pers["player-name"];
+    	    names = players[i].name;
     	}
     	else
     	{
-    		names = names + ", " + players[i].pers["player-name"];
+    		names = names + ", " + players[i].name;
     	}
     }
 

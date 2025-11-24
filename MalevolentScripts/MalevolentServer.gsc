@@ -47,21 +47,17 @@ init() {
     level thread initialize_database();
 
     level thread event_server_started();
-    level thread event_upload_statistics();
+    level thread event_upload_leaderboard();
 }
 
 initialize_player() {
     for(;;)
     {
         level waittill("connected", player);
+
         player thread initialize_account();
-        player thread initialize_player_spawn(player);
 
         player thread event_player_joined();
+        player thread event_upload_statistics();
     }
-}
-
-initialize_player_spawn(player) {
-    self endon("disconnect");
-    level waittill("initial_blackscreen_passed");
 }

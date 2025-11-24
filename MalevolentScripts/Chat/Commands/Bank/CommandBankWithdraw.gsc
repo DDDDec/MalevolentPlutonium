@@ -31,15 +31,27 @@ command_bank_withdraw(args)
         return;
     }
 
-    if (args[1] == "all" || int(args[1]) > int(money)) {
-        database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(money, self.guid));
-        self tell("[^5Withdraw^7] You have withdrawn ^5$" + utility_format_number(money) + "^7 from your bank account");
-        self.score = 1000000;
+    if (args[1] == "all") {
+        if (int(account[0][0]["user_money"]) >= int(money)) {
+            database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(money, self.guid));
+            self tell("[^5Withdraw^7] You have withdrawn ^5$" + utility_format_number(money) + "^7 from your bank account");
+            self.score = 1000000;
+            return;
+        }
+
+        database_query("UPDATE user_statistics SET user_money=0 WHERE id=?", array(self.guid));
+        self tell("[^5Withdraw^7] You have withdrawn ^5$" + utility_format_number(account[0][0]["user_money"]) + "^7 from your bank account");
+        self.score += int(account[0][0]["user_money"]);
         return;
     }
 
     if (int(args[1]) < 0) {
         self tell("[^5Withdraw^7] You need to input an amount greater than 0");
+        return;
+    }
+
+    if (int(args[1]) > int(account[0][0]["user_money"])) {
+        self tell("[^5Withdraw^7] You don't have enough money in your bank to withdraw ^5$" + utility_format_number(args[1]));
         return;
     }
 

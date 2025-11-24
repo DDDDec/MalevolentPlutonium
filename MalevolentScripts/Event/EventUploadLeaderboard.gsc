@@ -24,26 +24,6 @@ event_upload_leaderboard()
 {
     level waittill("end_game");
 
-    players = getPlayers();
-
-    iteration = 0;
-    kills = 0;
-    downs = 0;
-    revives = 0;
-    headshots = 0;
-
-    foreach(player in players)
-        if (int(iteration) == 0)
-            list = player.name;
-        else
-            list = list + " " + player.name;
-
-        kills += player.pers["kills"];
-        downs += player.pers["downs"];
-        revives += player.pers["revives"];
-        headshots += player.pers["headshots"];
-
-        iteration += 1;
-
-    database_query("INSERT INTO server_leaderboards (`server_map`,`server_players`,`server_round`,`server_kills`) VALUES (?,?,?,?)", array(utility_get_map(), list, level.round, kills));
+    insert = database_query("INSERT INTO server_leaderboards (`leaderboard_map`,`leaderboard_players`,`leaderboard_round`) VALUES (?,?,?)", array(utility_get_map(), utility_player_names_string(), level.round_number - 1));
+    say("[^5Leaderboards^7] Your leaderboard record has been uploaded & saved");
 }
