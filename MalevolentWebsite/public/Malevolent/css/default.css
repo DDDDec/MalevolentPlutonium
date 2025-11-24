@@ -45,6 +45,9 @@ input:nth-child(4) {
 input:nth-child(5) {
     margin-top: 15px;
 }
+input:nth-child(6) {
+    margin-top: 15px;
+}
 input[type="text"], input[type="password"], input[type="email"] {
     padding: 25px;
     border-radius: 10px;

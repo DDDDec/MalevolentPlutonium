@@ -1,6 +1,8 @@
 <div class="login">
-    <form>
-        <input type="text" name="username" placeholder="Please insert your username">
+    <form method="POST" action="{{ route('auth.login') }}">
+        @csrf
+
+        <input type="text" name="name" placeholder="Please insert your username">
         <input type="password" name="password" placeholder="Please insert your password">
 
         <div class="checkbox">
