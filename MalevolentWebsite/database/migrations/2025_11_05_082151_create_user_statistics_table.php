@@ -34,9 +34,12 @@ return new class extends Migration
             $table->integer('user_boss_kills')->default(0);
             $table->integer('user_missions_completed')->default(0);
             $table->integer('user_chat_games_won')->default(0);
+            $table->integer('user_achievements_completed')->default(0);
             $table->integer('user_gambled')->default(0);
             $table->integer('user_gambled_lost')->default(0);
             $table->integer('user_gambled_won')->default(0);
+            $table->integer('user_interest_gained')->default(0);
+            $table->integer('user_vaults_cracked')->default(0);
 
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();

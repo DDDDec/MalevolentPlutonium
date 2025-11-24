@@ -276,7 +276,6 @@ header .header i {
     color: white;
     font-weight: 600;
     margin-top: 10px;
-    font-size: 15px;
     width: 105%;
 }
 .serverlist .serverlist-grid .serverlist-grid-section .title i {
@@ -287,7 +286,6 @@ header .header i {
     color: #ffffffcc;
     font-size: 15px;
     padding-bottom: 6px;
-    padding-top: 6px;
 }
 
 .features {
