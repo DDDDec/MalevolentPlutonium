@@ -1,150 +1,17 @@
 <div class="serverlist" wire:poll.visible>
     <div class="vertical-scroll">
         <div class="serverlist-grid">
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="1"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="3"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="6"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="8"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="1"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="3"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="6"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="8"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="1"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="3"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="6"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="8"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="1"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="3"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="6"
-                    max="8"
-                ></progress>
-            </div>
-            <div class="serverlist-grid-section">
-                <div class="title"><i class="fa-solid fa-circle pulse"></i> 127.0.0.1:4977</div>
-                <div class="description">Nuketown</div>
-                <progress
-                    class="progress"
-                    value="8"
-                    max="8"
-                ></progress>
-            </div>
+            @foreach($servers as $server)
+                <div class="serverlist-grid-section">
+                    <div class="title"><i class="fa-solid fa-circle pulse"></i> {{ $server['server_ip'] }}:{{ $server['server_port'] }}</div>
+                    <div class="description">Nuketown</div>
+                    <progress
+                        class="progress"
+                        value="{{ $server['server_player_count'] }}"
+                        max="{{ $server['server_max_player_count'] }}"
+                    ></progress>
+                </div>
+            @endforeach
         </div>
     </div>
 </div>

@@ -15,6 +15,7 @@ class Server extends Model
         'server_ip',
         'server_port',
         'server_player_count',
+        'server_max_player_count',
         'server_round',
         'server_kills',
         'server_downs',
