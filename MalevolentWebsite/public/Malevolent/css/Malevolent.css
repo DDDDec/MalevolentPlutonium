@@ -507,6 +507,7 @@ header .header i {
     margin-top: 5px;
     text-decoration: none;
     font-size: 13px;
+    cursor: pointer;
 }
 .colors .colors-section a:hover {
     border: 2px solid #599bfa;

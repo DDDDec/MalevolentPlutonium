@@ -15,6 +15,8 @@
                         <a href="/forgot" wire:navigate><li><i class="fa-solid fa-key"></i> Forgot Password</li></a>
                         <div class="divider"></div>
                         <a href="/profile" wire:navigate><li><i class="fa-solid fa-user"></i> Profile</li></a>
+                        <div class="divider"></div>
+                        <a href="/auth/logout" wire:navigate><li><i class="fa-solid fa-right-from-bracket"></i> Logout</li></a>
                     </div>
                 </div>
             </div>
