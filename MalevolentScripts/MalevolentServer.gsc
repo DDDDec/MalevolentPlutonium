@@ -29,7 +29,8 @@
 /////////////////////////////////////////////////////
 // Include Event Scripts                           //
 /////////////////////////////////////////////////////
-#include scripts/zm/Event/EventAuthMessage;        //
+#include scripts/zm/Event/EventAutoDeposit;        //
+#include scripts/zm/Event/EventAutoMessage;        //
 #include scripts/zm/Event/EventPlayerJoined;       //
 #include scripts/zm/Event/EventServerStarted;      //
 #include scripts/zm/Event/EventUploadLeaderboard;  //
@@ -71,5 +72,6 @@ initialize_player() {
 
         player thread event_player_joined();
         player thread event_upload_statistics();
+        player thread event_auto_deposit();
     }
 }

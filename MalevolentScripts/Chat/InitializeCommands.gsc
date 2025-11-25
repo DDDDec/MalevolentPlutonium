@@ -5,6 +5,7 @@
 #include scripts/zm/Chat/Commands/Account/CommandAccountDetails;  //
 #include scripts/zm/Chat/Commands/Account/CommandAccountLevelup;  //
 #include scripts/zm/Chat/Commands/Account/CommandAccountPrestige; //
+#include scripts/zm/Chat/Commands/Bank/CommandBankAutoDeposit;    //
 #include scripts/zm/Chat/Commands/Bank/CommandBankBalance;        //
 #include scripts/zm/Chat/Commands/Bank/CommandBankDeposit;        //
 #include scripts/zm/Chat/Commands/Bank/CommandBankPay;            //
@@ -29,6 +30,7 @@ initialize_commands()
     chat::register_command(".levelup", ::command_account_levelup(args), true);
     chat::register_command(".prestige", ::command_account_prestige(args), true);
 
+    chat::register_command(".autodeposit", ::command_auto_deposit(args), true);
     chat::register_command(".balance", ::command_bank_balance(args), true);
     chat::register_command(".deposit", ::command_bank_deposit(args), true);
     chat::register_command(".pay", ::command_bank_pay(args), true);

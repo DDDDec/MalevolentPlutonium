@@ -31,7 +31,7 @@ initialize_account() {
         return;
     }
 
-    self.pers["player-data"] = account[0][0]["user_level"] + ";" + account[0][0]["user_rank"] + ";" + account[0][0]["user_prestige"] + ";" + self.name + ";" + account[0][0]["user_color"];
+    self.pers["player-data"] = account[0][0]["user_level"] + ";" + account[0][0]["user_rank"] + ";" + account[0][0]["user_prestige"] + ";" + self.name + ";" + account[0][0]["user_color"] + ";0";
 
     welcome = array(
         "---------[ ^5Malevolent Zombies^7 ]---------",

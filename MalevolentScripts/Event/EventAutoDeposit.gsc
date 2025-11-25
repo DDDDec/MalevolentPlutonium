@@ -6,12 +6,23 @@
 ///////////////////////////////////////////////
 
 ////////////////////////////////////////
-// Event Auto Message Script          //
+// Event Auto Deposit Script          //
 ////////////////////////////////////////
-// Event fires a message every x mins //
+// Tries to auto deposit every x secs //
 ////////////////////////////////////////
-event_auto_message()
+event_auto_deposit()
 {
-    foreach(message in messages)
-        say(message);
+    while (true) {
+        player_data = strToK(self.pers["player-data"], ";");
+
+        if (int(player_data[5]) == 1) {
+            if (int(self.score) == 1000000) {
+                score = 1000000;
+                self.score = 0;
+                update = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE id=?", array(score, self.guid));
+            }
+        }
+
+        wait 0.1;
+    }
 }
