@@ -5,6 +5,7 @@
 #include common_scripts/utility;      //
 #include maps/mp/zombies/_zm_utility; //
 #include maps/mp/zombies/_zm;         //
+#include maps/mp/zombies/_zm_score;   //
 ////////////////////////////////////////
 
 /////////////////////////////////////////////////
@@ -18,6 +19,12 @@
 ///////////////////////////////////////////////
 #include scripts/zm/Chat/InitializeCommands; //
 ///////////////////////////////////////////////
+
+//////////////////////////////////////
+// Include Core Game Scripts        //
+//////////////////////////////////////
+#include scripts/zm/Core/CoreScore; //
+//////////////////////////////////////
 
 /////////////////////////////////////////////////////
 // Include Event Scripts                           //
@@ -35,6 +42,11 @@
 #include scripts/zm/Utility/UtilityDatabase; //
 #include scripts/zm/Utility/Utility;         //
 ///////////////////////////////////////////////
+
+main()
+{
+    replaceFunc(maps\mp\zombies\_zm_score::player_add_points, ::core_score);
+}
 
 init() {
     setDvar("g_password", "");

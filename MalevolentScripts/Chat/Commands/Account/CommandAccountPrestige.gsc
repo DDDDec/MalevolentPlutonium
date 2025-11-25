@@ -19,7 +19,7 @@ command_account_prestige(args)
         return;
     }
 
-    if (int(player_data[1]) == int(getDvar("account_max_prestige"))) {
+    if (int(player_data[2]) == int(getDvar("account_max_prestige"))) {
         self tell("[^5Prestige^7] You are master prestige, you cannot prestige any further");
         return;
     }
