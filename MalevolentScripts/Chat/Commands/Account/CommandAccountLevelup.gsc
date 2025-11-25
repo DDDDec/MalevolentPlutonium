@@ -36,6 +36,7 @@ command_account_levelup(args)
     if (isDefined(args[1]) && args[1] == "all") {
         while (int(account[0][0]["user_level"]) < int(getDvar("account_max_prestige_level"))) {
             if (int(account[0][0]["user_money"]) < int(next_level_money)) { break; }
+            if (int(player_data[2]) < 20 && int(next_level) == int(getDvar("account_max_level"))) { break; }
 
             account[0][0]["user_level"] = int(account[0][0]["user_level"]) + 1;
             account[0][0]["user_money"] = int(account[0][0]["user_money"]) - int(next_level_money);
