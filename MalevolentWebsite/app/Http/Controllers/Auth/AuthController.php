@@ -27,7 +27,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
-            return redirect()->intended('/profile');
+            return redirect()->intended('/account');
         }
 
         return back()
@@ -59,7 +59,7 @@ class AuthController extends Controller
         event(new Registered($user));
         Auth::login($user);
 
-        return redirect('/profile');
+        return redirect('/account');
 
     }
 

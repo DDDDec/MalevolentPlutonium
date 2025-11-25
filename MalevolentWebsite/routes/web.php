@@ -13,4 +13,5 @@ Route::get('/register', function () { return view('register'); })->name('Registe
 Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::get('/forgot', function () { return view('forgot'); })->name('Forgot Password');
-Route::get('/profile', function () { return view('profile'); })->name('Profile');
+Route::get('/account', function () { return view('account'); })->name('Account');
+Route::get('/profile/{name}', function () { return view('profile'); })->name('Profile');

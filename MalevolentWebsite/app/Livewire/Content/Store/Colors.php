@@ -48,7 +48,7 @@ class Colors extends Component
     public function render()
     {
         $user = Auth::user();
-        $currentColor = UserStatistics::where('id', $user->id)->first()->user_color;
+        $currentColor = UserStatistics::where('id', $user->id ?? 0)->first()->user_color ?? 7;
 
         return view('livewire.content.store.colors', [
             'color' => $currentColor,
