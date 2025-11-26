@@ -128,5 +128,4 @@ class AuthController extends Controller
             'discord' => 'No account is linked to this Discord. Please log in and link it from your account settings.',
         ]);
     }
-
 }
