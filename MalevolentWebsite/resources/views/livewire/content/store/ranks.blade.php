@@ -1,7 +1,7 @@
 <div class="ranks" wire:poll.visible>
     <div class="ranks-section">
         <div class="title">
-            <i class="fa-solid fa-palette"></i>
+            <i class="fa-solid fa-star"></i>
             Vip Rank
         </div>
         <div class="description">
@@ -16,7 +16,7 @@
     </div>
     <div class="ranks-section">
         <div class="title">
-            <i class="fa-solid fa-palette"></i>
+            <i class="fa-solid fa-star"></i>
             VIP+ Rank
         </div>
         <div class="description">
@@ -31,7 +31,7 @@
     </div>
     <div class="ranks-section">
         <div class="title">
-            <i class="fa-solid fa-palette"></i>
+            <i class="fa-solid fa-star"></i>
             VIP++ Rank
         </div>
         <div class="description">
@@ -46,7 +46,7 @@
     </div>
     <div class="ranks-section">
         <div class="title">
-            <i class="fa-solid fa-palette"></i>
+            <i class="fa-solid fa-star"></i>
             VIP+++ Rank
         </div>
         <div class="description">

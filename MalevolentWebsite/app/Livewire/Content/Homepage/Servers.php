@@ -40,6 +40,10 @@ class Servers extends Component
             return Server::all()->sortByDesc('server_player_count');
         });
 
+        $playerCount = Cache::remember('content.homepage.player.count', 300, function () {
+            return Server::sum('server_player_count');
+        });
+
         return view('livewire.content.homepage.servers', [
             'servers' => $servers
         ]);

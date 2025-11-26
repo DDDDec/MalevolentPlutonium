@@ -8,7 +8,7 @@
                 <br>servers for you to enjoy by yourself or with your friends!
             </p>
             <div>
-                <i class="fa-solid fa-circle pulse"></i> 100 players online
+                <livewire:global.player-count/>
             </div>
         </div>
     </div>
