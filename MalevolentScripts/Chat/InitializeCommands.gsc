@@ -11,6 +11,8 @@
 #include scripts/zm/Chat/Commands/Bank/CommandBankPay;                       //
 #include scripts/zm/Chat/Commands/Bank/CommandBankShare;                     //
 #include scripts/zm/Chat/Commands/Bank/CommandBankWithdraw;                  //
+#include scripts/zm/Chat/Commands/Fun/CommandFunLockServer;                  //
+#include scripts/zm/Chat/Commands/Fun/CommandFunVault;                       //
 #include scripts/zm/Chat/Commands/Gamble/CommandGambleBet;                   //
 #include scripts/zm/Chat/Commands/Information/CommandInformationHelp;        //
 #include scripts/zm/Chat/Commands/Information/CommandInformationLeaderboard; //
@@ -18,8 +20,8 @@
 #include scripts/zm/Chat/Commands/Staff/CommandStaffGodmode;                 //
 #include scripts/zm/Chat/Commands/Staff/CommandStaffPlayer;                  //
 #include scripts/zm/Chat/Commands/Staff/CommandStaffPlayers;                 //
-#include scripts/zm/Chat/Commands/Staff/CommandToggleFog;                    //
-#include scripts/zm/Chat/Commands/Staff/CommandToggleVision;                 //
+#include scripts/zm/Chat/Commands/Vision/CommandToggleFog;                   //
+#include scripts/zm/Chat/Commands/Vision/CommandToggleVision;                //
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////
@@ -41,6 +43,9 @@ initialize_commands()
     chat::register_command(array(".pay", ".p"), ::command_bank_pay(args), true);
     chat::register_command(array(".share", ".s"), ::command_bank_share(args), true);
     chat::register_command(array(".withdraw", ".w"), ::command_bank_withdraw(args), true);
+
+    chat::register_command(array(".lock", ".l"), ::command_fun_lock_server(args), true);
+    chat::register_command(array(".vault", ".v"), ::command_fun_vault(args), true);
 
     chat::register_command(".bet", ::command_gamble_bet(args), true);
 

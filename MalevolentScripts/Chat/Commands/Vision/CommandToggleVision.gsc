@@ -12,7 +12,7 @@
 ////////////////////////////////////////
 command_toggle_vision()
 {
-    player useServerVisionSet(true);
-    player SetVisionSetforPlayer("remote_mortar_enhanced", 0);
+    self useServerVisionSet(true);
+    self SetVisionSetforPlayer("remote_mortar_enhanced", 0);
     self tell("[^5Vision^7] You have enabled enhanced vision");
 }

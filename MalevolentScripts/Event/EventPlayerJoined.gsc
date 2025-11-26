@@ -12,5 +12,18 @@
 //////////////////////////////////////////
 event_player_joined()
 {
-    database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, self.name + " just joined the " + utility_get_map() + " server"));
+    insert = database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, self.name + " just joined the " + utility_get_map() + " server"));
+    select = database_query("SELECT * FROM server_leaderboards ORDER BY leaderboard_round DESC LIMIT 1", array());
+
+    welcome = array(
+        "---------[ ^5Malevolent Zombies^7 ]---------",
+        "Welcome to ^5Malevolent^7, The best zombie servers",
+        "Type ^5.help^7 for a list of commands u can use",
+        "Fully register at our website ^5malevolent.website^7",
+        "Highest round is ^5" + utility_format_number(select[0][0]["leaderboard_round"]) + "^7 by ^5" + select[0][0]["leaderboard_players"],
+        "---------[ ^5Malevolent Zombies^7 ]---------"
+    );
+
+    foreach (message in welcome)
+        self tell(message);
 }

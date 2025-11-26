@@ -32,15 +32,4 @@ initialize_account() {
     }
 
     self.pers["player-data"] = account[0][0]["user_level"] + ";" + account[0][0]["user_rank"] + ";" + account[0][0]["user_prestige"] + ";" + self.name + ";" + account[0][0]["user_color"] + ";0";
-
-    welcome = array(
-        "---------[ ^5Malevolent Zombies^7 ]---------",
-        "Welcome to ^5Malevolent^7, The best zombie servers",
-        "Type ^5.help^7 for a list of commands u can use",
-        "Fully register at our website ^5malevolent.website^7",
-        "---------[ ^5Malevolent Zombies^7 ]---------"
-    );
-
-    foreach (message in welcome)
-        self tell(message);
 }
