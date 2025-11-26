@@ -33,13 +33,13 @@ command_bank_withdraw(args)
 
     if (args[1] == "all") {
         if (int(account[0][0]["user_money"]) >= int(money)) {
-            database_query("UPDATE user_statistics SET user_money=user_money-? WHERE id=?", array(money, self.guid));
+            database_query("UPDATE user_statistics SET user_money=user_money-? WHERE user_id=?", array(money, self.guid));
             self tell("[^5Withdraw^7] You have withdrawn ^5$" + utility_format_number(money) + "^7 from your bank account");
             self.score = 1000000;
             return;
         }
 
-        database_query("UPDATE user_statistics SET user_money=0 WHERE id=?", array(self.guid));
+        database_query("UPDATE user_statistics SET user_money=0 WHERE user_id=?", array(self.guid));
         self tell("[^5Withdraw^7] You have withdrawn ^5$" + utility_format_number(account[0][0]["user_money"]) + "^7 from your bank account");
         self.score += int(account[0][0]["user_money"]);
         return;
@@ -55,7 +55,7 @@ command_bank_withdraw(args)
         return;
     }
 
-    database_query("UPDATE user_statistics SET player_money=player_money-? WHERE id=?", array(args[1], self.guid));
+    database_query("UPDATE user_statistics SET player_money=player_money-? WHERE user_id=?", array(args[1], self.guid));
     database_query("INSERT INTO user_actions (`name`, `action`) VALUES (?, ?)",  array(self.name, "has just withdrawn £" + utility_format_number(args[1]) + " from their bank"));
     self tell("[^5Withdraw^7] You have withdraw ^5$" + utility_format_number(args[1]) + "^7 from your bank account");
     self.score += int(args[1]);

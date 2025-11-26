@@ -24,7 +24,7 @@ event_upload_statistics()
 {
     level waittill("end_game");
 
-    insert = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE id=?", array(self.score, self.guid));
+    insert = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE user_id=?", array(self.score, self.guid));
 
     self tell("[^5Leaderboards^7] Your statistics have been uploaded & saved");
 }

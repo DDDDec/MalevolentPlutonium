@@ -19,7 +19,7 @@ event_auto_deposit()
             if (int(self.score) == 1000000) {
                 score = 1000000;
                 self.score = 0;
-                update = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE id=?", array(score, self.guid));
+                update = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE user_id=?", array(score, self.guid));
             }
         }
 

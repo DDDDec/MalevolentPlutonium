@@ -12,6 +12,6 @@ fun_command_vault(args)
         return;
     }
 
-    account = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE id=?", array(vault[0][0]["vault_money"], self.guid));
+    account = database_query("UPDATE user_statistics SET user_money=user_money+? WHERE user_id=?", array(vault[0][0]["vault_money"], self.guid));
     self tell("[^5Vault^7] you cracked open a vault with ^5" + args[1] + "^7 and won ^5$" + vault[0][0]["vault_money"]);
 }
