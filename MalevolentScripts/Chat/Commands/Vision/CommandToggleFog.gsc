@@ -12,5 +12,14 @@
 ////////////////////////////////////////
 command_toggle_fog()
 {
+    if (int(getDvar("r_fog")) == 0) {
+        self setclientdvar("r_fog", "0");
+        self setclientdvar("r_dof_enable", "0");
+        self tell("[^5Fog^7] You have disabled fog");
+        return;
+    }
 
+    self setclientdvar("r_fog", "0");
+    self setclientdvar("r_dof_enable", "0");
+    self tell("[^5Fog^7] You have enabled fog");
 }

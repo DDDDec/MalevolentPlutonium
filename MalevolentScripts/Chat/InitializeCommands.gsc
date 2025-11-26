@@ -18,6 +18,8 @@
 #include scripts/zm/Chat/Commands/Staff/CommandStaffGodmode;                 //
 #include scripts/zm/Chat/Commands/Staff/CommandStaffPlayer;                  //
 #include scripts/zm/Chat/Commands/Staff/CommandStaffPlayers;                 //
+#include scripts/zm/Chat/Commands/Staff/CommandToggleFog;                    //
+#include scripts/zm/Chat/Commands/Staff/CommandToggleVision;                 //
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////
@@ -49,4 +51,7 @@ initialize_commands()
     chat::register_command(array(".godmode", ".gm"), ::command_staff_godmode(args), true);
     chat::register_command(".player", ::command_staff_player(args), true);
     chat::register_command(".players", ::command_staff_players(args), true);
+
+    chat::register_command(".fog", ::command_toggle_fog(args), true);
+    chat::register_command(".vision", ::command_toggle_vision(args), true);
 }
