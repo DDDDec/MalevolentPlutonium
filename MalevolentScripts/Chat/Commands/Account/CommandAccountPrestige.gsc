@@ -31,7 +31,7 @@ command_account_prestige(args)
         return;
     }
 
-    database_query("UPDATE user_statistics SET user_level=1, user_money=user_money-?, user_prestige=user_prestige+1 WHERE id=?", array(getDvar("account_max_prestige"), self.guid));
+    database_query("UPDATE user_statistics SET user_level=1, user_money=user_money-?, user_prestige=user_prestige+1 WHERE user_id=?", array(getDvar("account_max_prestige"), self.guid));
     database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)",  array(self.name, "has prestiged up to prestige " + next_prestige));
     next_prestige = int(player_data[2]) + 1;
     self.pers["player-data"] = "1;" + account[0][0]["user_rank"] + ";" + next_prestige + ";" + self.name + ";" + account[0][0]["user_color"];

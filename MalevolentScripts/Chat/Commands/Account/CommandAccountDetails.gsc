@@ -12,7 +12,7 @@
 ////////////////////////////////////////////
 command_account_details(args)
 {
-    account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
+    account = database_query("SELECT * FROM user_statistics WHERE user_id=?", array(self.guid));
 
     details = array(
         "[^5Account^7] GUID: " + self.guid,

@@ -24,7 +24,7 @@ command_account_levelup(args)
         return;
     }
 
-    account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
+    account = database_query("SELECT * FROM user_statistics WHERE user_id=?", array(self.guid));
     next_level_money = int(account[0][0]["user_level"]) * int(getDvar("account_cost_level"));
     next_level = int(account[0][0]["user_level"]) + 1;
 
@@ -44,7 +44,7 @@ command_account_levelup(args)
             next_level = int(account[0][0]["user_level"]) + 1;
         }
 
-        database_query("UPDATE user_statistics SET user_level=?, user_money=? WHERE id=?", array(account[0][0]["user_level"], account[0][0]["user_money"], self.guid));
+        database_query("UPDATE user_statistics SET user_level=?, user_money=? WHERE user_id=?", array(account[0][0]["user_level"], account[0][0]["user_money"], self.guid));
         database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)",  array(self.name, "has leveled up to level " + account[0][0]["user_level"]));
 
         self.pers["player-data"] = next_level + ";" + account[0][0]["user_rank"] + ";" + account[0][0]["user_prestige"] + ";" + self.name + ";" + account[0][0]["user_color"];
@@ -54,7 +54,7 @@ command_account_levelup(args)
         return;
     }
 
-    database_query("UPDATE user_statistics SET user_money=user_money-?, user_level=user_level+1 WHERE id=?", array(next_level_money, self.guid));
+    database_query("UPDATE user_statistics SET user_money=user_money-?, user_level=user_level+1 WHERE user_id=?", array(next_level_money, self.guid));
     database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)",  array(self.name, "has leveled up to level " + next_level));
 
     self.pers["player-data"] = next_level + ";" + account[0][0]["user_rank"] + ";" + account[0][0]["user_prestige"] + ";" + self.name + ";" + account[0][0]["user_color"];

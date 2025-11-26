@@ -24,7 +24,7 @@ command_bank_withdraw(args)
         return;
     }
 
-    account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
+    account = database_query("SELECT * FROM user_statistics WHERE user_id=?", array(self.guid));
 
     if (int(account[0][0]["user_money"]) == 0) {
         self tell("[^5Withdraw^7] You don't have any money in your bank account");
