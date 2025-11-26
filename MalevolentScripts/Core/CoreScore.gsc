@@ -52,42 +52,59 @@ core_score(event, mod, hit_location, is_dog, zombie_team, damage_weapon)
 
             break;
         case "ballistic_knife_death":
+            player_points = get_zombie_death_player_points() + level.zombie_vars["zombie_score_bonus_melee"];
+            self score_cf_increment_info( "death_melee" );
             self.score += 10 * int(player_data[2]);
             break;
         case "damage_light":
+            player_points = level.zombie_vars["zombie_score_damage_light"];
+            self score_cf_increment_info( "damage" );
             self.score += 10 * int(player_data[2]);
             break;
         case "damage":
+            player_points = level.zombie_vars["zombie_score_damage_normal"];
+            self score_cf_increment_info( "damage" );
             self.score += 10 * int(player_data[2]);
             break;
         case "damage_ads":
+            player_points = int( level.zombie_vars["zombie_score_damage_normal"] * 1.25 );
+            self score_cf_increment_info( "damage" );
             self.score += 10 * int(player_data[2]);
             break;
         case "carpenter_powerup":
         case "rebuild_board":
+            player_points = mod;
             self.score += 10 * int(player_data[2]);
             break;
         case "bonus_points_powerup":
+            player_points = mod;
             self.score += 10 * int(player_data[2]);
             break;
         case "nuke_powerup":
-            self.score += 400 * int(player_data[2]);
+            player_points = mod;
+            team_points = mod;
+            self.score += 10 * int(player_data[2]);
             break;
         case "jetgun_fling":
         case "riotshield_fling":
         case "thundergun_fling":
+            player_points = mod;
             self.score += 10 * int(player_data[2]);
             break;
         case "hacker_transfer":
+            player_points = mod;
             self.score += 10 * int(player_data[2]);
             break;
         case "reviver":
+            player_points = mod;
             self.score += 10 * int(player_data[2]);
             break;
         case "vulture":
+            player_points = mod;
             self.score += 10 * int(player_data[2]);
             break;
         case "build_wallbuy":
+            player_points = mod;
             self.score += 10 * int(player_data[2]);
             break;
         default:

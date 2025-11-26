@@ -48,8 +48,8 @@ class AuthController extends Controller
 
         $user = DB::transaction(function () use ($request, $userCode) {
             return $this->createUser([
-                'id' => $userCode->id,
-                'name' => $userCode->name,
+                'id' => $userCode->user_id,
+                'name' => $userCode->user_name,
                 'email' => $request->email,
                 'password' => $request->password,
             ]);

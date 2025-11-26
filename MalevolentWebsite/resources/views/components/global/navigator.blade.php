@@ -12,8 +12,12 @@
                         @if(Auth()->user())
                             <a href="/account" wire:navigate><li><i class="fa-solid fa-gear"></i> Account Page</li></a>
                             <a href="/profile/{{ Auth()->User()->name }}" wire:navigate><li><i class="fa-solid fa-user"></i> Profile Page</li></a>
+                            @if(str_ends_with(Auth()->user()->email, '@' . config('app.domain')))
+                                <div class="divider"></div>
+                                <a href="/admin/login" target="_blank"><li><i class="fa-solid fa-hammer"></i> Admin Panel</li></a>
+                            @endif
                             <div class="divider"></div>
-                            <a href="/auth/logout" wire:navigate><li><i class="fa-solid fa-right-from-bracket"></i> Logout</li></a>
+                            <a href="/auth/logout" target="_blank" wire:navigate><li><i class="fa-solid fa-right-from-bracket"></i> Logout</li></a>
                         @else
                             <a href="/login" wire:navigate><li><i class="fa-solid fa-right-to-bracket"></i> Login</li></a>
                             <a href="/register" wire:navigate><li><i class="fa-solid fa-user-plus"></i> Register</li></a>

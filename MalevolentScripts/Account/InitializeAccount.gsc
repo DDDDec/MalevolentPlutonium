@@ -19,11 +19,11 @@
 // Sorts the players account data            //
 ///////////////////////////////////////////////
 initialize_account() {
-    account = database_query("SELECT * FROM user_statistics WHERE id = ?", array(self.guid));
+    account = database_query("SELECT * FROM user_statistics WHERE user_id = ?", array(self.guid));
 
     if (account[0].size == 0) {
-        database_query("INSERT INTO `user_statistics` (`id`, `name`) VALUES (?, ?)", array(self.guid, self.name));
-        account = database_query("SELECT * FROM user_statistics WHERE id = ?", array(self.guid));
+        database_query("INSERT INTO user_statistics (`user_id`, `user_name`) VALUES (?, ?)", array(self.guid, self.name));
+        account = database_query("SELECT * FROM user_statistics WHERE user_id = ?", array(self.guid));
     }
 
     if (int(account[0][0]["user_banned"]) == 1) {

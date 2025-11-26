@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('server_ip');
             $table->integer('server_port')->unique();
-            $table->integer('server_player_count')->default(0);
+            $table->integer('server_player_count')->default(0)->index();
             $table->integer('server_max_player_count')->default(0);
             $table->integer('server_round')->default(0);
             $table->integer('server_kills')->default(0);

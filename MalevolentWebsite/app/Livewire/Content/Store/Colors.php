@@ -25,7 +25,7 @@ class Colors extends Component
             return;
         }
 
-        $user = UserStatistics::where('id', $authUser->id)->first();
+        $user = UserStatistics::where('user_id', $authUser->id)->first();
 
         if (!$user) {
             session()->flash('error', 'User statistics not found.');
@@ -44,11 +44,10 @@ class Colors extends Component
         session()->flash('success', 'You have successfully purchased this color.');
     }
 
-
     public function render()
     {
         $user = Auth::user();
-        $currentColor = UserStatistics::where('id', $user->id ?? 0)->first()->user_color ?? 7;
+        $currentColor = UserStatistics::where('user_id', $user->id ?? 0)->first()->user_color ?? 7;
 
         return view('livewire.content.store.colors', [
             'color' => $currentColor,

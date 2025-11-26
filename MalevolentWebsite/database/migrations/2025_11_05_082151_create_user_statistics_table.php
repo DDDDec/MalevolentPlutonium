@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_statistics', function (Blueprint $table) {
-            $table->foreignId('id')->primary();
-            $table->string('name')->unique();
+            $table->foreignId('user_id')->primary();
+            $table->string('user_name')->unique();
             $table->integer('user_rank')->default(0);
             $table->integer('user_prestige')->default(0);
             $table->integer('user_level')->default(1);

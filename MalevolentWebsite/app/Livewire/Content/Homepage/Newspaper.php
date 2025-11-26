@@ -11,7 +11,9 @@ class Newspaper extends Component
     public function render()
     {
         $newspapers = Cache::remember('content.homepage.newspaper', 300, function () {
-            return ModelsNewspaper::all()->sortByDesc('created_at')->take(4);
+            return ModelsNewspaper::orderByDesc('created_at')
+                ->limit(4)
+                ->get();
         });
 
         return view('livewire.content.homepage.newspaper', [
