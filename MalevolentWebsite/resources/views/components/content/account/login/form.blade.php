@@ -14,6 +14,6 @@
     </form>
 
     <div class="login-social">
-        <a href="#">Login via Discord</a>
+        <a href="/discord/redirect">Login via Discord</a>
     </div>
 </div>

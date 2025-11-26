@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Hash;
 
 use App\Models\User;
 use App\Models\UserStatistics;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -82,4 +83,50 @@ class AuthController extends Controller
 
         return redirect('/');
     }
+
+    public function discordRedirect()
+    {
+        return Socialite::driver('discord')->redirect();
+    }
+
+    public function discordCallback()
+    {
+        $discord = Socialite::driver('discord')->stateless()->user();
+
+        $discordId = $discord->getId();
+        $discordAvatar = $discord->getAvatar();
+
+        if (Auth::check()) {
+            $user = Auth::user();
+
+            $conflict = User::where('discord_id', $discordId)
+                ->where('id', '!=', $user->id)
+                ->first();
+
+            if ($conflict) {
+                return redirect('/account')->withErrors([
+                    'discord' => 'This Discord account is already linked to another user.',
+                ]);
+            }
+
+            $user->update([
+                'discord_id' => $discordId,
+                'discord_avatar' => $discordAvatar,
+            ]);
+
+            return redirect('/account')->with('status', 'Discord account linked successfully.');
+        }
+
+        $user = User::where('discord_id', $discordId)->first();
+
+        if ($user) {
+            Auth::login($user);
+            return redirect('/account');
+        }
+
+        return redirect('/login')->withErrors([
+            'discord' => 'No account is linked to this Discord. Please log in and link it from your account settings.',
+        ]);
+    }
+
 }

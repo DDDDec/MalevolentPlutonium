@@ -15,3 +15,6 @@ Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout
 Route::get('/forgot', function () { return view('forgot'); })->name('Forgot Password');
 Route::get('/account', function () { return view('account'); })->name('Account');
 Route::get('/profile/{name}', function () { return view('profile'); })->name('Profile');
+
+Route::get('/discord/redirect', [AuthController::class, 'discordRedirect']);
+Route::get('/discord/callback', [AuthController::class, 'discordCallback']);
