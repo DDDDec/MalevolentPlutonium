@@ -514,6 +514,67 @@ header .header i {
     box-shadow: 0px 0px 10px 0px #599bfa;
 }
 
+.ranks {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+.ranks .ranks-section {
+    width: 100%;
+    background: #a7a7a70d;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid #a7a7a70d;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+.ranks .ranks-section .title {
+    color: white;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.ranks .ranks-section .title i {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background: #599bfa;
+    margin-right: 10px;
+}
+.ranks .ranks-section .description {
+    color: #ffffffcc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.ranks .ranks-section a {
+    width: 100%;
+    display: inline-block;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #ffffff35;
+    color: white;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: 0.2s;
+    margin-top: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+.ranks .ranks-section a:hover {
+    border: 2px solid #599bfa;
+    box-shadow: 0px 0px 10px 0px #599bfa;
+}
+
 .wallet {
     width: 100%;
     padding: 25px;

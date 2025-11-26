@@ -14,6 +14,7 @@
                 <div>
 
                     <livewire:content.store.colors/>
+                    <livewire:content.store.ranks/>
 
                 </div>
                 <div>

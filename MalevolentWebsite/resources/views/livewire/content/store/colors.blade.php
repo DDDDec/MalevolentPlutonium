@@ -5,7 +5,8 @@
             Blue Username Color
         </div>
         <div class="description">
-            This package will change the color of your username to blue in-game for you to see and everyone else.
+            This package will change the color of your username to blue in-game for you to see and everyone else.<br><br>
+            Cost: £{{ number_format(100000) }}
         </div>
         @if($color == 5)
             <a>Already in use</a>
@@ -19,7 +20,8 @@
             Red Username Color
         </div>
         <div class="description">
-            This package will change the color of your username to blue in-game for you to see and everyone else.
+            This package will change the color of your username to blue in-game for you to see and everyone else.<br><br>
+            Cost: £{{ number_format(100000) }}
         </div>
         @if($color == 1)
             <a>Already in use</a>
@@ -33,7 +35,8 @@
             Pink Username Color
         </div>
         <div class="description">
-            This package will change the color of your username to blue in-game for you to see and everyone else.
+            This package will change the color of your username to blue in-game for you to see and everyone else.<br><br>
+            Cost: £{{ number_format(100000) }}
         </div>
         @if($color == 6)
             <a>Already in use</a>
@@ -47,7 +50,8 @@
             Green Username Color
         </div>
         <div class="description">
-            This package will change the color of your username to blue in-game for you to see and everyone else.
+            This package will change the color of your username to blue in-game for you to see and everyone else.<br><br>
+            Cost: £{{ number_format(100000) }}
         </div>
         @if($color == 2)
             <a>Already in use</a>
