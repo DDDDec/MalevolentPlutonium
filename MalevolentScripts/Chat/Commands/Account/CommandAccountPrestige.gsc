@@ -24,7 +24,7 @@ command_account_prestige(args)
         return;
     }
 
-    account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
+    account = database_query("SELECT * FROM user_statistics WHERE user_id=?", array(self.guid));
 
     if (int(account[0][0]["user_money"]) < int(getDvar("account_cost_prestige"))) {
         self tell("[^5Prestige^7] You cannot afford ^5$" + utility_format_number(getDvar("account_cost_prestige")) + "^7 to prestige");
