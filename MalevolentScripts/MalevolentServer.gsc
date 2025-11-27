@@ -61,6 +61,7 @@ init() {
 
     level thread event_server_started();
     level thread event_upload_leaderboard();
+    level thread event_easteregg_reward();
 }
 
 initialize_player() {

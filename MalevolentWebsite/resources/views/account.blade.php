@@ -13,7 +13,7 @@
             <div class="content">
                 <div>
 
-                    <x-content.account.profile.avatar/>
+                    <livewire:content.account.account.avatar :user="$user"/>
                     <x-content.account.profile.mission/>
                     <x-content.account.profile.achievement/>
 

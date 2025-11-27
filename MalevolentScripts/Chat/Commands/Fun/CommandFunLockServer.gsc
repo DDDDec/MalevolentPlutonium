@@ -12,7 +12,7 @@
 ///////////////////////////////////////
 command_fun_lock_server(args)
 {
-    if (int(level.round_number) < int(getDvar("server_lock_allowed_round"))) {
+    if (int(level.round_number) < int(getDvar("command_lock_allowed_round"))) {
         self tell("[^5ServerLock^7] You cannot lock the server until round 15 or higher");
         return;
     }
