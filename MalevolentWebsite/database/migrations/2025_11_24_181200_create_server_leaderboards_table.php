@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('server_leaderboards', function (Blueprint $table) {
             $table->id();
-            $table->string('leaderboard_map');
+            $table->string('leaderboard_map')->index();
             $table->string('leaderboard_players');
+            $table->integer('leaderboard_player_count')->index();
             $table->integer('leaderboard_round')->default(0);
 
             $table->timestamp('created_at')->useCurrent();

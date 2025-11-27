@@ -36,6 +36,6 @@
     </div>
     <div class="avatar-placeholder">
         <div class="title">Last Played Map</div>
-        <div class="description">Nuketown</div>
+        <div class="description">{{ $statistics->user_last_map }}</div>
     </div>
 </div>

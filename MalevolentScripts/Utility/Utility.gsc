@@ -166,13 +166,15 @@ utility_player_names_string()
 
     for ( i = 0; i < players.size; i++ )
     {
+        player_data = strToK(players[i].pers["player-data"], ";");
+
         if (names == "")
     	{
-    	    names = players[i].name;
+    	    names = player_data[3];
     	}
     	else
     	{
-    		names = names + ", " + players[i].name;
+    		names = names + ", " + player_data[3];
     	}
     }
 
