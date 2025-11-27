@@ -22,7 +22,7 @@ initialize_account() {
     account = database_query("SELECT * FROM user_statistics WHERE user_id = ?", array(self.guid));
 
     if (account[0].size == 0) {
-        database_query("INSERT INTO user_statistics (`user_id`, `user_name`) VALUES (?, ?)", array(self.guid, self.name));
+        database_query("INSERT INTO user_statistics (`user_id`, `user_name`, `user_last_map`) VALUES (?, ?, ?)", array(self.guid, self.name, utility_get_map()));
         account = database_query("SELECT * FROM user_statistics WHERE user_id = ?", array(self.guid));
     }
 

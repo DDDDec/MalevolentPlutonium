@@ -21,6 +21,7 @@ class UserStatistics extends Model
     protected $fillable = [
         'id',
         'user_name',
+        'user_last_map',
         'user_rank',
         'user_prestige',
         'user_level',

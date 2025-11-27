@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('user_statistics', function (Blueprint $table) {
             $table->foreignId('user_id')->primary();
             $table->string('user_name')->unique();
-            $table->integer('user_rank')->default(0);
-            $table->integer('user_prestige')->default(0);
-            $table->integer('user_level')->default(1);
-            $table->integer('user_color')->default("7");
+            $table->string('user_last_map');
+            $table->integer('user_rank')->default(config('malevolent.settings.default_starting_rank'));
+            $table->integer('user_prestige')->default(config('malevolent.settings.default_starting_prestige'));
+            $table->integer('user_level')->default(config('malevolent.settings.default_starting_level'));;
+            $table->integer('user_color')->default(config('malevolent.settings.default_starting_color'));
             $table->integer('user_banned')->default(0);
-            $table->unsignedBigInteger('user_money')->default(100000)->index();
+            $table->unsignedBigInteger('user_money')->default(config('malevolent.settings.default_starting_money'))->index();
             $table->integer('user_code')->nullable();
 
             $table->integer('user_joins')->default(0)->index();
