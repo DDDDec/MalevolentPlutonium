@@ -27,8 +27,8 @@
         <div class="description">{{ $statistics->updated_at->diffForHumans() }}</div>
     </div>
     <div class="avatar-placeholder">
-        <div class="title">Banned</div>
-        <div class="description">{{ $statistics->user_banned == 1 ? 'You\'re banned' : 'You\'re not banned' }}</div>
+        <div class="title">Status</div>
+        <div class="description">{{ $statistics->user_banned == 1 ? 'Banned' : 'Unbanned' }}</div>
     </div>
     <div class="avatar-placeholder">
         <div class="title">Prestige</div>
