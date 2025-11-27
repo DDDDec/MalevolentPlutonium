@@ -14,14 +14,14 @@
                 <div>
 
                     <livewire:content.account.account.avatar :user="$user"/>
-                    <x-content.account.profile.mission/>
-                    <x-content.account.profile.achievement/>
+                    <livewire:content.account.account.mission :user="$user"/>
+                    <livewire:content.account.account.achievement :user="$user"/>
 
                 </div>
                 <div>
 
-                    <x-content.account.profile.statistics/>
-                    <x-content.account.profile.activity/>
+                    <livewire:content.account.account.statistics :user="$user"/>
+                    <livewire:content.account.account.activity :user="$user"/>
 
                 </div>
             </div>

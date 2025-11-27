@@ -13,14 +13,14 @@
             <div class="content">
                 <div>
 
-                    <x-content.account.profile.avatar/>
-                    <x-content.account.profile.achievement/>
+                    <livewire:content.account.profile.avatar :name="$name"/>
+                    <livewire:content.account.profile.achievement :name="$name"/>
 
                 </div>
                 <div>
 
-                    <x-content.account.profile.statistics/>
-                    <x-content.account.profile.activity/>
+                    <livewire:content.account.profile.statistics :name="$name"/>
+                    <livewire:content.account.profile.activity :name="$name"/>
 
                 </div>
             </div>
