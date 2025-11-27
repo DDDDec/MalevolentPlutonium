@@ -35,7 +35,7 @@
         <div class="description">{{ $statistics->user_prestige }}</div>
     </div>
     <div class="avatar-placeholder">
-        <div class="title">Last Map Played</div>
+        <div class="title">Last Played Map</div>
         <div class="description">Nuketown</div>
     </div>
 </div>
