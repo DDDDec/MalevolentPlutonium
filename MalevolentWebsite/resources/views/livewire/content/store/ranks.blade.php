@@ -8,7 +8,7 @@
             This package will change your rank to VIP and give you access to commands and other perks locked behind a rank.<br><br>
             Cost: £{{ number_format(100000) }}
         </div>
-        @if($rank == 5)
+        @if($rank == 1)
             <a>Already in use</a>
         @else
             <a wire:click.prevent="purchase(1)">Buy</a>
@@ -23,7 +23,7 @@
             This package will change your rank to VIP+ and give you access to commands and other perks locked behind a rank.<br><br>
             Cost: £{{ number_format(100000) }}
         </div>
-        @if($rank == 1)
+        @if($rank == 2)
             <a>Already in use</a>
         @else
             <a wire:click.prevent="purchase(2)">Buy</a>
@@ -38,7 +38,7 @@
             This package will change your rank to VIP++ and give you access to commands and other perks locked behind a rank.<br><br>
             Cost: £{{ number_format(100000) }}
         </div>
-        @if($rank == 6)
+        @if($rank == 3)
             <a>Already in use</a>
         @else
             <a wire:click.prevent="purchase(3)">Buy</a>
@@ -53,7 +53,7 @@
             This package will change your rank to VIP+++ and give you access to commands and other perks locked behind a rank.<br><br>
             Cost: £{{ number_format(100000) }}
         </div>
-        @if($rank == 2)
+        @if($rank == 4)
             <a>Already in use</a>
         @else
             <a wire:click.prevent="purchase(4)">Buy</a>

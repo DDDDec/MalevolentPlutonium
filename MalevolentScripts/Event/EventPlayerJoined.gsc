@@ -12,8 +12,9 @@
 //////////////////////////////////////////
 event_player_joined()
 {
-    insert = database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, self.name + " just joined the " + utility_get_map() + " server"));
+    insert = database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, self.name + " joined the " + utility_get_map() + " server"));
     select = database_query("SELECT * FROM server_leaderboards ORDER BY leaderboard_round DESC LIMIT 1", array());
+    update = database_query("UPDATE user_statistics SET user_map=? WHERE user_id=?", array(utility_get_map(), self.guid));
 
     welcome = array(
         "---------[ ^5Malevolent Zombies^7 ]---------",

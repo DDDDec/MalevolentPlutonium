@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Content\Account\Profile;
 
-use App\Models\User;
 use App\Models\UserStatistics;
+use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 
 class Avatar extends Component
@@ -12,8 +12,9 @@ class Avatar extends Component
 
     public function render()
     {
-        $user = User::where('name', $this->name)->first()->name;
-        $statistics = UserStatistics::where('user_name', $user)->first();
+        $statistics = Cache::remember('account.account.profile.statistics'.$this->name, 300, function () {
+            return UserStatistics::where('user_name', $this->name)->first();
+        });
 
         return view('livewire.content.account.profile.avatar', [
             'statistics' => $statistics
