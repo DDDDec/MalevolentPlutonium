@@ -31,6 +31,7 @@
 /////////////////////////////////////////////////////
 #include scripts/zm/Event/EventAutoDeposit;        //
 #include scripts/zm/Event/EventAutoMessage;        //
+#include scripts/zm/Event/EventEasterEggReward;    //
 #include scripts/zm/Event/EventPlayerJoined;       //
 #include scripts/zm/Event/EventServerStarted;      //
 #include scripts/zm/Event/EventUploadLeaderboard;  //
