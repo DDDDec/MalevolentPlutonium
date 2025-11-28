@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('server_achievements', function (Blueprint $table) {
+        Schema::create('user_achievements', function (Blueprint $table) {
             $table->id();
-            $table->string('achievement_name');
-            $table->string('achievement_description');
-            $table->string('achievement_statistic_name');
-            $table->integer('achievement_reward')->default(0);
-            $table->integer('achievement_amount')->default(0);
+            $table->Integer('achievement_id');
+            $table->Integer('user_id');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('server_achievements');
+        Schema::dropIfExists('user_achievements');
     }
 };

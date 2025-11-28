@@ -906,6 +906,19 @@ form input {
     font-size: 15px;
     padding-bottom: 6px;
 }
+.achievement .achievement-grid .achievement-grid-section a {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background: #599bfa;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 .statistics {
     width: 100%;
@@ -928,29 +941,19 @@ form input {
     border-radius: 10px;
 }
 .statistics .placeholder .title {
-    font-weight: 600;
     margin-top: 18px;
-    padding-left: 40px;
-}
-.statistics .placeholder .title a {
-    text-decoration: none;
-    color: white;
-    transition: 0.2s;
-}
-.statistics .placeholder .title a:hover {
-    color: #599bfa;
-}
-.statistics .placeholder img {
-    width: 30px;
-    border-radius: 100%;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
-.statistics .placeholder .description {
     color: #ffffffcc;
     font-size: 14px;
-    padding: 15px 0;
+}
+.statistics .placeholder .description {
+    color: white;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+.statistics .placeholder .description {
+    color: white;
+    font-weight: 600;
+    padding-bottom: 15px;
 }
 
 .activity {

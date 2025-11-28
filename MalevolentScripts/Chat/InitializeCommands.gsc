@@ -12,6 +12,7 @@
 #include scripts/zm/Chat/Commands/Bank/CommandBankShare;                     //
 #include scripts/zm/Chat/Commands/Bank/CommandBankWithdraw;                  //
 #include scripts/zm/Chat/Commands/Fun/CommandFunLockServer;                  //
+#include scripts/zm/Chat/Commands/Fun/CommandFunPerkaholic;                  //
 #include scripts/zm/Chat/Commands/Fun/CommandFunVault;                       //
 #include scripts/zm/Chat/Commands/Gamble/CommandGambleBet;                   //
 #include scripts/zm/Chat/Commands/Information/CommandInformationHelp;        //
@@ -45,6 +46,7 @@ initialize_commands()
     chat::register_command(array(".withdraw", ".w"), ::command_bank_withdraw(args), true);
 
     chat::register_command(array(".lock", ".l"), ::command_fun_lock_server(args), true);
+    chat::register_command(array(".perkaholic", ".perks"), ::command_fun_perkaholic(args), true);
     chat::register_command(array(".vault", ".v"), ::command_fun_vault(args), true);
 
     chat::register_command(".bet", ::command_gamble_bet(args), true);

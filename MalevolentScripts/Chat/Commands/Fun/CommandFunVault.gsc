@@ -17,7 +17,7 @@ command_fun_vault(args)
         return;
     }
 
-    select = database_query("SELECT * FROM server_vaults WHERE passcode=?", array(args[1]));
+    select = database_query("SELECT * FROM server_vaults WHERE vault_code=?", array(args[1]));
 
     if (!isDefined(select[0][0]["passcode"])) {
         self tell("[^5Vault^7] You failed to crack open a vault with ^5" + args[1]);

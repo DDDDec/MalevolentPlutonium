@@ -17,10 +17,10 @@ class ServerAchievementSeeder extends Seeder
         $time = now();
 
         $achievements = [
-            ['achievement_name' => '5000 Kills', 'achievement_description' => "Kill 5000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 5000, 'created_at' => $time, 'updated_at' => $time],
-            ['achievement_name' => '20000 Kills', 'achievement_description' => "Kill 20000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 12500, 'created_at' => $time, 'updated_at' => $time],
-            ['achievement_name' => '75000 Kills', 'achievement_description' => "Kill 75000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 50000, 'created_at' => $time, 'updated_at' => $time],
-            ['achievement_name' => '200000 Kills', 'achievement_description' => "Kill 200000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 125000, 'created_at' => $time, 'updated_at' => $time],
+            ['achievement_name' => '5000 Kills', 'achievement_description' => "Kill 5000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 5000, 'achievement_amount' => 5000, 'created_at' => $time, 'updated_at' => $time],
+            ['achievement_name' => '20000 Kills', 'achievement_description' => "Kill 20000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 12500, 'achievement_amount' => 12500, 'created_at' => $time, 'updated_at' => $time],
+            ['achievement_name' => '75000 Kills', 'achievement_description' => "Kill 75000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 75000, 'achievement_amount' => 75000, 'created_at' => $time, 'updated_at' => $time],
+            ['achievement_name' => '200000 Kills', 'achievement_description' => "Kill 200000 zombies", 'achievement_statistic_name' => 'user_kills', 'achievement_reward' => 125000, 'achievement_amount' => 125000, 'created_at' => $time, 'updated_at' => $time],
         ];
 
         DB::transaction(function () use ($achievements) {

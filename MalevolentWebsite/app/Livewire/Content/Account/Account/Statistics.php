@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Content\Account\Account;
 
+use App\Models\UserStatistics;
 use Livewire\Component;
 
 class Statistics extends Component
@@ -10,6 +11,10 @@ class Statistics extends Component
 
     public function render()
     {
-        return view('livewire.content.account.account.statistics');
+        $statistics = UserStatistics::where('user_id', $this->user->id)->first();
+
+        return view('livewire.content.account.account.statistics', [
+            'statistics' => $statistics
+        ]);
     }
 }

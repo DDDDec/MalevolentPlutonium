@@ -13,7 +13,7 @@
 event_player_joined()
 {
     insert = database_query("INSERT INTO user_actions (`user_name`, `user_action`) VALUES (?, ?)", array(self.name, self.name + " joined the " + utility_get_map() + " server"));
-    select = database_query("SELECT * FROM server_leaderboards WHERE server_map=? ORDER BY leaderboard_round DESC LIMIT 1", array(utility_get_map()));
+    select = database_query("SELECT * FROM server_leaderboards WHERE leaderboard_map=? ORDER BY leaderboard_round DESC LIMIT 1", array(utility_get_map()));
     update = database_query("UPDATE user_statistics SET user_map=? WHERE user_id=?", array(utility_get_map(), self.guid));
 
     if (isDefined(select[0][0]["leaderboard_map"])) {
