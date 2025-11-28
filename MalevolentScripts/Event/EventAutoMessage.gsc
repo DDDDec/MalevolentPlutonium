@@ -12,11 +12,18 @@
 ////////////////////////////////////////
 event_auto_message()
 {
-    messages = array(
-        "",
-        ""
-    );
+    level endon("end_game");
 
-    foreach(message in messages)
-        say(message);
+    while (true) {
+        messages = array(
+            "",
+            ""
+        );
+
+        foreach(message in messages) {
+            say(message);
+        }
+
+        wait 300;
+    }
 }

@@ -27,7 +27,7 @@ command_bank_pay(args)
         return;
     }
 
-    account = database_query("SELECT * FROM user_statistics WHERE id=?", array(self.guid));
+    account = database_query("SELECT * FROM user_statistics WHERE user_id=?", array(self.guid));
 
     if (int(args[1]) > int(account[0][0]["user_money"])) {
         self tell("[^5Pay^7] You cannot pay money you do not have");

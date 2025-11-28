@@ -23,8 +23,10 @@
 event_upload_statistics()
 {
     level waittill("end_game");
+    self endon("disconnect");
 
     insert = database_query("UPDATE user_statistics SET user_money=user_money+?, user_joins=user_joins+?, user_kills=user_kills+?, user_downs=user_downs+?, user_revives=user_revives+?, user_headshots=user_headshots+? WHERE user_id=?", array(self.score, 1, self.pers["kills"], self.pers["downs"], self.pers["revives"], self.pers["headshots"], self.guid));
 
+    self.score = 0;
     self tell("[^5Leaderboards^7] Your statistics have been uploaded & saved");
 }

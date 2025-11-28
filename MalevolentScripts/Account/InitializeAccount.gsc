@@ -31,6 +31,9 @@ initialize_account() {
         return;
     }
 
+    self setClientDvar("r_lodBiasRigid", -1000);
+    self setClientDvar("r_lodBiasSkinned", -1000);
+
     self.pers["player-data"] = account[0][0]["user_level"] + ";" + account[0][0]["user_rank"] + ";" + account[0][0]["user_prestige"] + ";" + self.name + ";" + account[0][0]["user_color"] + ";0";
     self rename("[^" + account[0][0]["user_color"]  + "L" + account[0][0]["user_level"] + "^7][^" + account[0][0]["user_color"]  + "P" + account[0][0]["user_prestige"] + "^7] " + self.name + "^7");
 }

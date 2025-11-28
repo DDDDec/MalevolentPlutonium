@@ -12,6 +12,9 @@
 ////////////////////////////////////////
 event_auto_deposit()
 {
+    level endon("end_game");
+    self endon("disconnect");
+
     while (true) {
         player_data = strToK(self.pers["player-data"], ";");
 
