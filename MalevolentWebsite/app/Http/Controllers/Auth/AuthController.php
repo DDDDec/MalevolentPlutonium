@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
 
+use App\Models\ServerMissions;
+use App\Models\UserMission;
+use Carbon\Carbon;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -54,6 +57,10 @@ class AuthController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
             ]);
+        });
+
+        DB::transaction(function () use ($user) {
+            $this->createUserMissions($user);
         });
 
 
@@ -127,5 +134,40 @@ class AuthController extends Controller
         return redirect('/login')->withErrors([
             'discord' => 'No account is linked to this Discord. Please log in and link it from your account settings.',
         ]);
+    }
+
+    public function createUserMissions(User $user): void
+    {
+        $missionTypes = ['daily', 'weekly', 'biweekly', 'monthly'];
+
+        foreach ($missionTypes as $type) {
+            $missions = ServerMissions::where('mission_type', $type)
+                ->inRandomOrder()
+                ->limit(4)
+                ->get();
+
+            $resetAt = match ($type) {
+                'daily' => Carbon::now()->addDay(),
+                'weekly' => Carbon::now()->addWeek(),
+                'biweekly' => Carbon::now()->addWeek(2),
+                'monthly' => Carbon::now()->addMonth(),
+                default => Carbon::now()->addDay(),
+            };
+
+            foreach ($missions as $mission) {
+                UserMission::create([
+                    'user_id' => $user->id,
+                    'mission_id' => $mission->id,
+                    'mission_name' => $mission->mission_name,
+                    'mission_statistic' => $mission->mission_statistic_name,
+                    'mission_statistic_amount' => $mission->mission_amount,
+                    'mission_statistic_progress' => 0,
+                    'mission_reward' => $mission->mission_reward,
+                    'mission_type' => $mission->mission_type,
+                    'mission_completed' => false,
+                    'reset_at' => $resetAt,
+                ]);
+            }
+        }
     }
 }

@@ -16,7 +16,6 @@
                         <a wire:click="achievement({{ $achievement->id }})">
                             Claim Reward
                         </a>
-
                     @else
                         <progress
                             class="progress"
