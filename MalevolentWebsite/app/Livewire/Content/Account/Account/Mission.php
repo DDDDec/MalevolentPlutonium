@@ -43,24 +43,18 @@ class Mission extends Component
                     ->limit($expiredMissions->count())
                     ->get();
 
-                $resetAt = match ($type) {
-                    'daily' => Carbon::now()->addDay(),
-                    'weekly' => Carbon::now()->addWeek(),
-                    'biweekly' => Carbon::now()->addWeek(2),
-                    'monthly' => Carbon::now()->addMonth(),
-                    default => Carbon::now()->addDay(),
-                };
-
                 foreach ($expiredMissions as $index => $userMission) {
                     $newMission = $newMissions[$index] ?? null;
 
                     if ($newMission) {
+                        $resetAt = $this->getNextResetTime($type, $userMission->reset_at);
+
                         $userMission->update([
                             'mission_id' => $newMission->id,
                             'mission_name' => $newMission->mission_name,
-                            'mission_statistic' => $newMission->mission_statistic,
-                            'mission_statistic_amount' => $newMission->mission_statistic_amount,
-                            'mission_statistic_progress' => $userStatistics->{$newMission->mission_statistic},
+                            'mission_statistic' => $newMission->mission_statistic_name,
+                            'mission_statistic_amount' => $newMission->mission_amount,
+                            'mission_statistic_progress' => $userStatistics->{$newMission->mission_statistic_name},
                             'mission_reward' => $newMission->mission_reward,
                             'mission_type' => $newMission->mission_type,
                             'mission_completed' => false,
@@ -70,6 +64,32 @@ class Mission extends Component
                 }
             }
         }
+    }
+
+    private function getNextResetTime(string $type, string $previousReset): Carbon
+    {
+        $now = Carbon::now();
+        $previousReset = Carbon::parse($previousReset);
+
+        $nextReset = match ($type) {
+            'daily' => $previousReset->copy()->addDay(),
+            'weekly' => $previousReset->copy()->addWeek(),
+            'biweekly' => $previousReset->copy()->addWeeks(2),
+            'monthly' => $previousReset->copy()->addMonth(),
+            default => $previousReset->copy()->addDay(),
+        };
+
+        while ($nextReset->lt($now)) {
+            $nextReset = match ($type) {
+                'daily' => $nextReset->addDay(),
+                'weekly' => $nextReset->addWeek(),
+                'biweekly' => $nextReset->addWeeks(2),
+                'monthly' => $nextReset->addMonth(),
+                default => $nextReset->addDay(),
+            };
+        }
+
+        return $nextReset;
     }
 
     public function render()
