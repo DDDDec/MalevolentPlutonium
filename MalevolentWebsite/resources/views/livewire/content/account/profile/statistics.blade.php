@@ -1,42 +1,42 @@
 <div class="statistics" wire:poll.visible>
     <div class="placeholder">
         <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
+            Money
         </div>
         <div class="description">
-            Dec bet £100,000 and lost against Teddy
+            £{{ number_format($statistics->user_money) }}
         </div>
     </div>
     <div class="placeholder">
         <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
+            Kills
         </div>
         <div class="description">
-            Dec bet £100,000 and lost against Teddy
+            {{ number_format($statistics->user_kills) }}
         </div>
     </div>
     <div class="placeholder">
         <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
+            Downs
         </div>
         <div class="description">
-            Dec bet £100,000 and lost against Teddy
+            {{ number_format($statistics->user_downs) }}
         </div>
     </div>
     <div class="placeholder">
         <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
+            Revives
         </div>
         <div class="description">
-            Dec bet £100,000 and lost against Teddy
+            {{ number_format($statistics->user_revives) }}
         </div>
     </div>
     <div class="placeholder">
         <div class="title">
-            <a href="{{ config('app.url') }}/profile/Dec"><img src="{{ Avatar::create('Dec')->setDimension(75)->setFontSize(36)->setChars(1)->toBase64() }}"/> Dec</a>
+            Headshots
         </div>
         <div class="description">
-            Dec bet £100,000 and lost against Teddy
+            {{ number_format($statistics->user_headshots) }}
         </div>
     </div>
 </div>
